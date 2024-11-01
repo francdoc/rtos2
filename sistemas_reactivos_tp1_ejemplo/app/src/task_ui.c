@@ -18,7 +18,7 @@ void task_ui(void* argument)
     {
         if (xQueueReceive(ui_queue, &event, portMAX_DELAY) == pdPASS)
         {
-        	led_event_t led_event = LED_TYPE_NONE;
+        	led_event_t led_event = LED_NONE;
             switch (event)
             {
                 case BUTTON_TYPE_PULSE:

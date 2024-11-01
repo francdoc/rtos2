@@ -47,7 +47,7 @@ extern "C" {
 /********************** typedef **********************************************/
 typedef enum
 {
-  LED_TYPE_NONE,
+  LED_NONE,
   LED_RED_ON,
   LED_RED_OFF,
   LED_RED_BLINK,
