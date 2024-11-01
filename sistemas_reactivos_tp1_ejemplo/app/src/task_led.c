@@ -8,6 +8,7 @@
 #include "logger.h"
 #include "dwt.h"
 #include "app.h"
+#include "task_led.h"
 
 // LED blink duration in milliseconds
 #define BLINK_DELAY_MS (1000)
@@ -24,7 +25,7 @@ void task_led(void* argument)
         {
             switch (event)
             {
-                case BUTTON_TYPE_PULSE: // from led_red_queue
+                case LED_RED_BLINK:
                     LOGGER_INFO("LED set to RED blink");
                     HAL_GPIO_WritePin(LED_RED_PORT, LED_RED_PIN, GPIO_PIN_SET);
                     vTaskDelay(pdMS_TO_TICKS(BLINK_DELAY_MS));
@@ -32,7 +33,7 @@ void task_led(void* argument)
                     vTaskDelay(pdMS_TO_TICKS(BLINK_DELAY_MS));
                     break;
 
-                case BUTTON_TYPE_SHORT: // from led_yellow_queue
+                case LED_YELLOW_BLINK:
                     LOGGER_INFO("LED set to YELLOW blink");
                     HAL_GPIO_WritePin(LED_YELLOW_PORT, LED_YELLOW_PIN, GPIO_PIN_SET);
                     vTaskDelay(pdMS_TO_TICKS(BLINK_DELAY_MS));
@@ -40,7 +41,7 @@ void task_led(void* argument)
                     vTaskDelay(pdMS_TO_TICKS(BLINK_DELAY_MS));
                     break;
 
-                case BUTTON_TYPE_LONG: // from led_blue_queue
+                case LED_BLUE_BLINK:
                     LOGGER_INFO("LED set to BLUE blink");
                     HAL_GPIO_WritePin(LED_BLUE_PORT, LED_BLUE_PIN, GPIO_PIN_SET);
                     vTaskDelay(pdMS_TO_TICKS(BLINK_DELAY_MS));

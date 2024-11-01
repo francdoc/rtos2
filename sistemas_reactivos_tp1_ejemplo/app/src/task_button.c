@@ -9,6 +9,7 @@
 #include "dwt.h"
 
 #include "app.h"
+#include "task_ui.h"
 
 #define TASK_PERIOD_MS_           (5)
 #define BUTTON_PERIOD_MS_         (TASK_PERIOD_MS_)
@@ -30,15 +31,15 @@ void task_button(void* argument)
         }
         else
         {
-            int event = 0;
+        	button_event_t event = BUTTON_TYPE_NONE;
             if (button_counter >= LONG_BUTTON_LOWER_LIMIT_MS)
-                event = BUTTON_TYPE_LONG; // to led_blue_queue
+                event = BUTTON_TYPE_LONG;
             else if (button_counter >= SHORT_BUTTON_UPPER_LIMIT_MS && button_counter <= LONG_BUTTON_LOWER_LIMIT_MS)
-                event = BUTTON_TYPE_SHORT;  // to led_yellow_queue
+                event = BUTTON_TYPE_SHORT;
             else if (button_counter >= PULSE_BUTTON_LOWER_LIMIT_MS && button_counter <= SHORT_BUTTON_UPPER_LIMIT_MS)
-                event = BUTTON_TYPE_PULSE; // to led_red_queue
+                event = BUTTON_TYPE_PULSE;
 
-            if (event)
+            if (BUTTON_TYPE_NONE != event)
             {
                 // Log button duration before sending the event
                 LOGGER_INFO("Button event duration: %lu ms", button_counter);

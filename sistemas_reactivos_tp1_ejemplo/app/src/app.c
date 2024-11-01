@@ -19,10 +19,10 @@ QueueHandle_t led_yellow_queue;
 
 void app_init(void)
 {
-    ui_queue = xQueueCreate(1, sizeof(int));
-    led_red_queue = xQueueCreate(1, sizeof(int));
-    led_blue_queue = xQueueCreate(1, sizeof(int));
-    led_yellow_queue = xQueueCreate(1, sizeof(int));
+    ui_queue = xQueueCreate(1, sizeof(button_event_t));
+    led_red_queue = xQueueCreate(1, sizeof(led_event_t));
+    led_blue_queue = xQueueCreate(1, sizeof(led_event_t));
+    led_yellow_queue = xQueueCreate(1, sizeof(led_event_t));
 
     configASSERT(ui_queue != NULL);
     configASSERT(led_red_queue != NULL);
