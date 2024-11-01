@@ -1,0 +1,47 @@
+#include "main.h"
+#include "cmsis_os.h"
+#include "logger.h"
+#include "dwt.h"
+#include "board.h"
+
+#include "task_button.h"
+#include "task_led.h"
+#include "task_ui.h"
+#include "app.h"
+#include "cmsis_os.h"
+#include "logger.h"
+
+QueueHandle_t ui_queue;
+QueueHandle_t led_red_queue;
+QueueHandle_t led_blue_queue;
+QueueHandle_t led3_queue;
+
+void app_init(void)
+{
+    ui_queue = xQueueCreate(1, sizeof(int));
+    led1_queue = xQueueCreate(1, sizeof(int));
+    led2_queue = xQueueCreate(1, sizeof(int));
+    led3_queue = xQueueCreate(1, sizeof(int));
+
+    configASSERT(ui_queue != NULL);
+    configASSERT(led1_queue != NULL);
+    configASSERT(led2_queue != NULL);
+    configASSERT(led3_queue != NULL);
+
+    vQueueAddToRegistry(ui_queue, "UI Queue");
+    vQueueAddToRegistry(led1_queue, "LED1 Queue");
+    vQueueAddToRegistry(led2_queue, "LED2 Queue");
+    vQueueAddToRegistry(led3_queue, "LED3 Queue");
+
+    xTaskCreate(task_button, "Button Task", 128, NULL, tskIDLE_PRIORITY, NULL);
+    xTaskCreate(task_ui, "UI Task", 128, NULL, tskIDLE_PRIORITY, NULL);
+    xTaskCreate(task_led, "LED1 Task", 128, (void*)led1_queue, tskIDLE_PRIORITY, NULL);
+    xTaskCreate(task_led, "LED2 Task", 128, (void*)led2_queue, tskIDLE_PRIORITY, NULL);
+    xTaskCreate(task_led, "LED3 Task", 128, (void*)led3_queue, tskIDLE_PRIORITY, NULL);
+
+    LOGGER_INFO("App initialized");
+
+    cycle_counter_init();
+}
+
+/********************** end of file ******************************************/
