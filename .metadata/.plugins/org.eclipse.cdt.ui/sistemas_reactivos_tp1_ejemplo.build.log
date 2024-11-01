@@ -1,4 +1,4 @@
-14:03:59 **** Incremental Build of configuration Debug for project sistemas_reactivos_tp1_ejemplo ****
+14:09:44 **** Incremental Build of configuration Debug for project sistemas_reactivos_tp1_ejemplo ****
 make -j16 all 
 arm-none-eabi-gcc "../app/src/task_button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../app/inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"app/src/task_button.d" -MT"app/src/task_button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "app/src/task_button.o"
 arm-none-eabi-gcc -o "sistemas_reactivos_tp1_ejemplo.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"/home/franco/repos/rtos2/sistemas_reactivos_tp1_ejemplo/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sistemas_reactivos_tp1_ejemplo.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -8,11 +8,11 @@ Finished building target: sistemas_reactivos_tp1_ejemplo.elf
 arm-none-eabi-size  sistemas_reactivos_tp1_ejemplo.elf 
 arm-none-eabi-objdump -h -S sistemas_reactivos_tp1_ejemplo.elf  > "sistemas_reactivos_tp1_ejemplo.list"
    text	   data	    bss	    dec	    hex	filename
-  31344	    124	  19964	  51432	   c8e8	sistemas_reactivos_tp1_ejemplo.elf
+  31524	    124	  19964	  51612	   c99c	sistemas_reactivos_tp1_ejemplo.elf
 Finished building: default.size.stdout
  
 Finished building: sistemas_reactivos_tp1_ejemplo.list
  
 
-14:03:59 Build Finished. 0 errors, 1 warnings. (took 414ms)
+14:09:44 Build Finished. 0 errors, 1 warnings. (took 367ms)
 

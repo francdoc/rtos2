@@ -39,7 +39,11 @@ void task_button(void* argument)
                 event = BUTTON_TYPE_PULSE; // to led_red_queue
 
             if (event)
+            {
+                // Log button duration before sending the event
+                LOGGER_INFO("Button event duration: %lu ms", button_counter);
                 xQueueSend(ui_queue, &event, ( TickType_t ) 0);
+            }
 
             button_counter = 0;
         }
