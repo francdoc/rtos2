@@ -13,7 +13,7 @@
 
 void task_ui(void* argument)
 {
-	button_event_t event;
+    button_event_t event;
     while (true)
     {
         if (xQueueReceive(ui_queue, &event, portMAX_DELAY) == pdPASS)

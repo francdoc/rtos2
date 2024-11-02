@@ -34,6 +34,12 @@ void app_init(void)
     vQueueAddToRegistry(led_blue_queue, "LED Blue Queue");
     vQueueAddToRegistry(led_yellow_queue, "LED Yellow Queue");
 
+    // NOTE: There are generally two main approaches for the UI active object to access the queue handles of each LED active object:
+    // 1) Using global handles.
+    // 2) Passing each LED active object to the UI active object, allowing private access to these handles.
+
+    // In this case we choose option 1).
+
     xTaskCreate(task_button, "Button Task", 128, NULL, tskIDLE_PRIORITY, NULL);
     xTaskCreate(task_ui, "UI Task", 128, NULL, tskIDLE_PRIORITY, NULL);
     xTaskCreate(task_led, "LED Red Task", 128, (void*)led_red_queue, tskIDLE_PRIORITY, NULL);
