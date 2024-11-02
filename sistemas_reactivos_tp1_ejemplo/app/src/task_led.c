@@ -21,9 +21,12 @@ void task_led(void* argument)
     {
         // Receive event from queue
         if (xQueueReceive(led_queue, &event, portMAX_DELAY) == pdPASS) 
-        // NOTE: Using global queue handles, while convenient, can lead to potential issues in concurrent systems. 
-        //       A better approach would be to encapsulate the queue handle in an "active object" structure, 
-        //       allowing us to access the specific memory region holding the queue handle, reducing the risk of conflicts in a multithreaded environment.                                                                
+        // NOTE 1: Using global queue handles, while convenient, can lead to potential issues in concurrent systems. 
+        //         A better approach would be to encapsulate the queue handle in an "active object" structure, 
+        //         allowing us to access the specific memory region holding the queue handle, reducing the risk of conflicts in a multithreaded environment.                                                                
+        
+        // NOTE 2: The events handled in the switch statement should be LED-related events, not button events. 
+        //         This decoupling helps to separate button handling from LED actions.
         {
             switch (event)
             {
