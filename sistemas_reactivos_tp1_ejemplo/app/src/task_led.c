@@ -20,7 +20,10 @@ void task_led(void* argument)
     while (true)
     {
         // Receive event from queue
-        if (xQueueReceive(led_queue, &event, portMAX_DELAY) == pdPASS)
+        if (xQueueReceive(led_queue, &event, portMAX_DELAY) == pdPASS) 
+        // NOTE: Using global queue handles, while convenient, can lead to potential issues in concurrent systems. 
+        //       A better approach would be to encapsulate the queue handle in an "active object" structure, 
+        //       allowing us to access the specific memory region holding the queue handle, reducing the risk of conflicts in a multithreaded environment.                                                                
         {
             switch (event)
             {
