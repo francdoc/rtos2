@@ -1,3 +1,5 @@
+//task_button.c
+
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
@@ -20,7 +22,10 @@
 
 void task_button(void* argument)
 {
+	button_task_params_t *params = (button_task_params_t*) argument;
     uint32_t button_counter = 0;
+
+    LOGGER_INFO("Button task initialized");
 
     while (true)
     {
@@ -43,7 +48,7 @@ void task_button(void* argument)
             {
                 // Log button duration before sending the event
                 LOGGER_INFO("Button event duration: %lu ms", button_counter);
-                xQueueSend(ui_queue, &event, ( TickType_t ) 0);
+                xQueueSend(params->ui_queue_h, &event, ( TickType_t ) 0);
 
                 // Log the sent event
                 LOGGER_INFO("Sent event to UI queue: %d", event);

@@ -1,3 +1,5 @@
+// task_led.c
+
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
@@ -16,13 +18,22 @@
 
 void task_led(void* argument)
 {
-    QueueHandle_t led_queue = (QueueHandle_t)argument;
+    LOGGER_INFO("Debugging I led task init...");
+
+    led_task_params_t *params = (led_task_params_t*) argument;
+
+    LOGGER_INFO("Debugging II led task init...");
+
+    QueueHandle_t led_recv_queue_h = params->led_ao.event_queue_h;
+
     led_event_t event;
+
+    LOGGER_INFO("LED task initialized");
 
     while (true)
     {
         // Receive event from queue
-        if (xQueueReceive(led_queue, &event, portMAX_DELAY) == pdPASS) 
+        if (xQueueReceive(led_recv_queue_h, &event, portMAX_DELAY) == pdPASS)
         {
             LOGGER_INFO("Event received in LED task: %d", event);  // Log received event
             // NOTE 1: Using global queue handles, while convenient, can lead to potential issues in concurrent systems.

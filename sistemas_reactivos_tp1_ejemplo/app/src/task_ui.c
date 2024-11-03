@@ -1,3 +1,5 @@
+// task_ui.c
+
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
@@ -13,12 +15,24 @@
 
 void task_ui(void* argument)
 {
+	ui_task_params_t *params = (ui_task_params_t*) argument;
+
+    QueueHandle_t ui_recv_queue_h = params->ui_ao.event_queue_h;
+
+    QueueHandle_t led_red_queue = params->led_red_queue_h;
+    QueueHandle_t led_yellow_queue = params->led_yellow_queue_h;
+    QueueHandle_t led_blue_queue = params->led_blue_queue_h;
+
     button_event_t event;
+
+    LOGGER_INFO("UI task initialized");
+
     while (true)
     {
-        if (xQueueReceive(ui_queue, &event, portMAX_DELAY) == pdPASS)
+        if (xQueueReceive(ui_recv_queue_h, &event, portMAX_DELAY) == pdPASS)
         {
             led_event_t led_event = LED_NONE;
+
             switch (event)
             {
                 case BUTTON_TYPE_PULSE:
@@ -40,6 +54,7 @@ void task_ui(void* argument)
                     LOGGER_INFO("Received unknown event, no LED action sent");
                     break;
             }
+            vTaskDelay(pdMS_TO_TICKS(5));
         }
     }
 }
