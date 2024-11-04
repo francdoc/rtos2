@@ -21,6 +21,12 @@ static active_object_t led_red_ao;
 static active_object_t led_blue_ao;
 static active_object_t led_yellow_ao;
 
+static button_task_params_t button_task_params;
+static ui_task_params_t ui_task_params;
+static led_task_params_t led_red_params;
+static led_task_params_t led_blue_params;
+static led_task_params_t led_yellow_params;
+
 void app_init(void)
 {
     ui_ao.event_queue_h = xQueueCreate(1, sizeof(button_event_t));
@@ -47,38 +53,30 @@ void app_init(void)
 
     // In this case we choose option 2).
 
-    button_task_params_t button_task_params = {
-    		.ui_queue_h = ui_ao.event_queue_h
-    };
+    // NOTE: The task parameter structures (button_task_params, ui_task_params, led_red_params, etc.)
+    //       are declared as global variables rather than local variables within app_init().
+    //       This prevents potential hard faults or undefined behavior caused by stack-allocated
+    //       variables going out of scope once app_init() completes. Since tasks run asynchronously
+    //       and continuously access these structures, they require globally persistent storage.
 
-    ui_task_params_t ui_task_params = {
-           .ui_ao = ui_ao,
-           .led_red_queue_h = led_red_ao.event_queue_h,
-           .led_blue_queue_h = led_blue_ao.event_queue_h,
-           .led_yellow_queue_h = led_yellow_ao.event_queue_h
-       };
+	button_task_params.ui_queue_h = ui_ao.event_queue_h;
 
-    led_task_params_t led_red_params = {
-    		.led_ao = led_red_ao
-    };
+	ui_task_params.ui_ao = ui_ao;
+	ui_task_params.led_red_queue_h = led_red_ao.event_queue_h;
+	ui_task_params.led_blue_queue_h = led_blue_ao.event_queue_h;
+	ui_task_params.led_yellow_queue_h = led_yellow_ao.event_queue_h;
 
-    led_task_params_t led_blue_params = {
-    		.led_ao = led_blue_ao
-    };
-
-    led_task_params_t led_yellow_params = {
-    		.led_ao = led_yellow_ao
-    };
+	led_red_params.led_ao = led_red_ao;
+	led_blue_params.led_ao = led_blue_ao;
+	led_yellow_params.led_ao = led_yellow_ao;
 
     xTaskCreate(task_button, "Button Task", 256, (void*)&button_task_params, tskIDLE_PRIORITY, NULL);
 
-    // xTaskCreate(task_ui, "UI Task", 256, (void*)&ui_task_params, tskIDLE_PRIORITY, NULL);
+    xTaskCreate(task_ui, "UI Task", 256, (void*)&ui_task_params, tskIDLE_PRIORITY, NULL);
 
-    /*
     xTaskCreate(task_led, "LED Red Task", 256, (void*)&led_red_params, tskIDLE_PRIORITY, NULL);
     xTaskCreate(task_led, "LED Blue Task", 256, (void*)&led_blue_params, tskIDLE_PRIORITY, NULL);
     xTaskCreate(task_led, "LED Yellow Task", 256, (void*)&led_yellow_params, tskIDLE_PRIORITY, NULL);
-	*/
 
     LOGGER_INFO("App initialized");
 
