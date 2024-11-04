@@ -1,18 +1,18 @@
-18:14:17 **** Incremental Build of configuration Debug for project sistemas_reactivos_tp1_ejemplo ****
-make -j16 all 
-arm-none-eabi-gcc "../app/src/task_button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../app/inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"app/src/task_button.d" -MT"app/src/task_button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "app/src/task_button.o"
-arm-none-eabi-gcc -o "sistemas_reactivos_tp1_ejemplo.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"/home/franco/repos/rtos2/sistemas_reactivos_tp1_ejemplo/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sistemas_reactivos_tp1_ejemplo.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+21:51:45 **** Incremental Build of configuration Debug for project sistemas_reactivos_tp1_ejemplo ****
+make -j12 all 
+arm-none-eabi-gcc "../app/src/task_led.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../app/inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"app/src/task_led.d" -MT"app/src/task_led.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "app/src/task_led.o"
+arm-none-eabi-gcc -o "sistemas_reactivos_tp1_ejemplo.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"/home/silico/repos/rtos2/sistemas_reactivos_tp1_ejemplo/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sistemas_reactivos_tp1_ejemplo.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: warning: sistemas_reactivos_tp1_ejemplo.elf has a LOAD segment with RWX permissions
 Finished building target: sistemas_reactivos_tp1_ejemplo.elf
  
 arm-none-eabi-size  sistemas_reactivos_tp1_ejemplo.elf 
 arm-none-eabi-objdump -h -S sistemas_reactivos_tp1_ejemplo.elf  > "sistemas_reactivos_tp1_ejemplo.list"
    text	   data	    bss	    dec	    hex	filename
-  32472	    124	  19964	  52560	   cd50	sistemas_reactivos_tp1_ejemplo.elf
+  33160	    124	  19996	  53280	   d020	sistemas_reactivos_tp1_ejemplo.elf
 Finished building: default.size.stdout
  
 Finished building: sistemas_reactivos_tp1_ejemplo.list
  
 
-18:14:17 Build Finished. 0 errors, 1 warnings. (took 362ms)
+21:51:46 Build Finished. 0 errors, 1 warnings. (took 769ms)
 

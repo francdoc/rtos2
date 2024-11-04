@@ -15,16 +15,16 @@ extern "C" {
 /********************** external data declaration ****************************/
 
 typedef struct {
-	QueueHandle_t ui_queue_h;
+	QueueHandle_t ui_queue_h; // queue for msg dispatching
 } button_task_params_t;
 
 typedef struct {
-	QueueHandle_t event_queue_h;
+	QueueHandle_t event_queue_h; // queue for event recv
 } active_object_t;
 
 typedef struct {
     active_object_t ui_ao;
-    QueueHandle_t led_red_queue_h;
+    QueueHandle_t led_red_queue_h;  // queue for msg dispatching
     QueueHandle_t led_blue_queue_h;
     QueueHandle_t led_yellow_queue_h;
 } ui_task_params_t;
