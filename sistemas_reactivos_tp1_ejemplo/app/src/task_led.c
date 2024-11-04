@@ -18,13 +18,7 @@
 
 void task_led(void* argument)
 {
-    LOGGER_INFO("Debugging I led task init...");
-
     led_task_params_t *params = (led_task_params_t*) argument;
-
-    LOGGER_INFO("Debugging II led task init...");
-
-    QueueHandle_t led_recv_queue_h = params->led_ao.event_queue_h;
 
     led_event_t event;
 
@@ -33,15 +27,17 @@ void task_led(void* argument)
     while (true)
     {
         // Receive event from queue
-        if (xQueueReceive(led_recv_queue_h, &event, portMAX_DELAY) == pdPASS)
+        if (xQueueReceive(params->led_ao.event_queue_h, &event, portMAX_DELAY) == pdPASS)
         {
             LOGGER_INFO("Event received in LED task: %d", event);  // Log received event
+
             // NOTE 1: Using global queue handles, while convenient, can lead to potential issues in concurrent systems.
             //         A better approach would be to encapsulate the queue handle in an "active object" structure,
             //         allowing us to access the specific memory region holding the queue handle, reducing the risk of conflicts in a multithreaded environment.
 
             // NOTE 2: The events handled in the switch statement should be LED-related events, not button events.
             //         This decoupling helps to separate button handling from LED actions.
+
             switch (event)
             {
                 case LED_RED_BLINK: // from led_red_queue
