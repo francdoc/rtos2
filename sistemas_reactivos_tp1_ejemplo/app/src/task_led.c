@@ -73,7 +73,38 @@ void task_led(void* argument)
 #endif
 }
 
+#ifdef SINGLE_TASK_SINGLE_AO
+void handle_led_event(ao_id_t led_id, led_event_t event) {
+    GPIO_TypeDef* port;
+    uint16_t pin;
+
+    switch (led_id) {
+        case AO_ID_LED_RED:
+            port = LED_RED_PORT;
+            pin = LED_RED_PIN;
+            break;
+        case AO_ID_LED_YELLOW:
+            port = LED_YELLOW_PORT;
+            pin = LED_YELLOW_PIN;
+            break;
+        case AO_ID_LED_BLUE:
+            port = LED_BLUE_PORT;
+            pin = LED_BLUE_PIN;
+            break;
+        default:
+            return;
+    }
+
+    if (event == LED_RED_ON || event == LED_YELLOW_ON || event == LED_BLUE_ON) {
+        HAL_GPIO_WritePin(port, pin, GPIO_PIN_SET);
+        vTaskDelay(pdMS_TO_TICKS(1000));
+        HAL_GPIO_WritePin(port, pin, GPIO_PIN_RESET);
+    }
+}
+#endif
+
 #ifdef SINGLE_TASK_MULTIPLE_AO
+
 void handle_led_event(ao_id_t led_id, led_event_t event) {
     GPIO_TypeDef* port;
     uint16_t pin;

@@ -13,6 +13,13 @@
 
 #include "app.h"
 
+#ifdef SINGLE_TASK_SINGLE_AO
+#include "memory_pool.h"
+QueueHandle_t dispatcher_queue;
+memory_pool_t memory_pool;
+static uint8_t memblock[MEMORY_POOL_SIZE(10,sizeof(ao_event_t))];
+#endif
+
 #ifdef SINGLE_TASK_MULTIPLE_AO
 #include "memory_pool.h"
 QueueHandle_t dispatcher_queue;
@@ -38,15 +45,26 @@ static led_task_params_t led_blue_params;
 static led_task_params_t led_yellow_params;
 #endif
 
-#ifdef SINGLE_TASK_MULTIPLE_AO
+#ifdef SINGLE_TASK_SINGLE_AO
 void memory_pool_block_free(void *pblock) {
     memory_pool_block_put(&memory_pool, pblock);
 }
 #endif
 
+#ifdef SINGLE_TASK_MULTIPLE_AO
+void memory_pool_block_free(void *pblock) {
+    memory_pool_block_put(&memory_pool, pblock);
+}
+
+QueueHandle_t ui_queue;
+QueueHandle_t led_red_queue;
+QueueHandle_t led_yellow_queue;
+QueueHandle_t led_blue_queue;
+#endif
+
 void app_init(void)
 {
-#ifdef SINGLE_TASK_MULTIPLE_AO
+#ifdef SINGLE_TASK_SINGLE_AO
 	memory_pool_init(&memory_pool, memblock, 10, sizeof(ao_event_t));
 	dispatcher_queue = xQueueCreate(10, sizeof(ao_event_t));
 	configASSERT(dispatcher_queue != NULL);
@@ -103,13 +121,26 @@ void app_init(void)
     xTaskCreate(task_led, "LED Yellow Task", 256, (void*)&led_yellow_params, tskIDLE_PRIORITY, NULL);
 #endif
 
-#ifdef SINGLE_TASK_MULTIPLE_AO
+#ifdef SINGLE_TASK_SINGLE_AO
     xTaskCreate(task_button, "Button Task", 256, NULL, tskIDLE_PRIORITY, NULL); // now queue handle for button task is 1 and it is global
     xTaskCreate(task_dispatcher, "Dispatcher Task", 256, NULL, tskIDLE_PRIORITY, NULL);
 #endif
 
-    LOGGER_INFO("App initialized");
+#ifdef SINGLE_TASK_MULTIPLE_AO
+	memory_pool_init(&memory_pool, memblock, 10, sizeof(ao_event_t));
 
+	ui_queue = xQueueCreate(10, sizeof(ao_event_t*));
+	led_red_queue = xQueueCreate(10, sizeof(ao_event_t*));
+	led_yellow_queue = xQueueCreate(10, sizeof(ao_event_t*));
+	led_blue_queue = xQueueCreate(10, sizeof(ao_event_t*));
+
+	configASSERT(ui_queue && led_red_queue && led_yellow_queue && led_blue_queue);
+
+	xTaskCreate(task_button, "Button Task", 256, NULL, tskIDLE_PRIORITY, NULL);
+	xTaskCreate(task_dispatcher, "Dispatcher Task", 256, NULL, tskIDLE_PRIORITY, NULL);
+#endif
+
+    LOGGER_INFO("App initialized");
     cycle_counter_init();
 }
 
