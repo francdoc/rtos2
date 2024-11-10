@@ -12,19 +12,6 @@ extern "C" {
 /********************** macros ***********************************************/
 
 /********************** typedef **********************************************/
-typedef enum
-{
-  LED_NONE,
-  LED_RED_ON,
-  LED_RED_OFF,
-  LED_RED_BLINK,
-  LED_YELLOW_ON,
-  LED_YELLOW_OFF,
-  LED_YELLOW_BLINK,
-  LED_BLUE_ON,
-  LED_BLUE_OFF,
-  LED_BLUE_BLINK,
-} led_event_t;
 
 /********************** external data declaration ****************************/
 

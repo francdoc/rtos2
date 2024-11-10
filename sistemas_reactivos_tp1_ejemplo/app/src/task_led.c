@@ -17,13 +17,12 @@
 
 void task_led(void* argument)
 {
-    led_task_params_t *params = (led_task_params_t*) argument;
-
-    led_event_t event;
-
     LOGGER_INFO("LED task initialized");
 
 #ifdef MULTIPLE_TASK_MULTIPLE_AO
+    led_task_params_t *params = (led_task_params_t*) argument;
+    led_event_t event;
+
     while (true)
     {
         // Receive event from queue

@@ -38,6 +38,21 @@ typedef struct {
 	active_object_t led_ao;
 } led_task_params_t;
 
+typedef enum
+{
+  LED_NONE,
+  LED_RED_ON,
+  LED_RED_OFF,
+  LED_RED_BLINK,
+  LED_YELLOW_ON,
+  LED_YELLOW_OFF,
+  LED_YELLOW_BLINK,
+  LED_BLUE_ON,
+  LED_BLUE_OFF,
+  LED_BLUE_BLINK,
+} led_event_t;
+
+#ifdef SINGLE_TASK_MULTIPLE_AO
 // Identificadores de AO
 typedef enum {
 	AO_ID_UI,
@@ -46,8 +61,6 @@ typedef enum {
 	AO_ID_LED_BLUE,
 } ao_id_t;
 
-
-#ifdef SINGLE_TASK_MULTIPLE_AO
 // Estructura de mensaje para comunicación entre AOs
 typedef struct {
 	ao_id_t recipient;
@@ -62,6 +75,7 @@ extern memory_pool_t memory_pool; // global memory pool for single-task configur
 extern QueueHandle_t dispatcher_queue; // global message queue for single-task configuration
 
 void handle_led_event(ao_id_t led_id, led_event_t event);
+void memory_pool_block_free(void *pblock);
 
 #endif
 

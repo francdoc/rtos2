@@ -22,12 +22,13 @@
 
 void task_button(void* argument)
 {
-	button_task_params_t *params = (button_task_params_t*) argument;
     uint32_t button_counter = 0;
 
     LOGGER_INFO("Button task initialized");
 
 #ifdef MULTIPLE_TASK_MULTIPLE_AO
+	button_task_params_t *params = (button_task_params_t*) argument;
+
     while (true)
     {
         GPIO_PinState button_state = HAL_GPIO_ReadPin(BUTTON_PORT, BUTTON_PIN);
