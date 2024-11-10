@@ -63,14 +63,17 @@ void handle_ui_event(button_event_t event) {
     if (msg != NULL) {
         switch (event) {
             case BUTTON_TYPE_PULSE:
+                LOGGER_INFO("Message prepared for LED_RED: LED_RED_ON");
                 msg->recipient = AO_ID_LED_RED;
                 msg->event_data.led_event = LED_RED_ON;
                 break;
             case BUTTON_TYPE_SHORT:
+                LOGGER_INFO("Message prepared for LED_YELLOW: LED_YELLOW_ON");
                 msg->recipient = AO_ID_LED_YELLOW;
                 msg->event_data.led_event = LED_YELLOW_ON;
                 break;
             case BUTTON_TYPE_LONG:
+                LOGGER_INFO("Message prepared for LED_BLUE: LED_BLUE_ON");
                 msg->recipient = AO_ID_LED_BLUE;
                 msg->event_data.led_event = LED_BLUE_ON;
                 break;
@@ -79,7 +82,13 @@ void handle_ui_event(button_event_t event) {
         }
         msg->callback_free = memory_pool_block_free;
         xQueueSend(dispatcher_queue, &msg, 0);
-    }
+        LOGGER_INFO("Message sent to dispatcher queue successfully.");
+    	}
+    else
+    {
+    	LOGGER_INFO("Failed to send message to dispatcher queue.");
+		msg->callback_free(msg);  // Free the memory if send failed
+	}
 }
 #endif
 

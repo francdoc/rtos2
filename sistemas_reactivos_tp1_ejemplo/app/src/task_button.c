@@ -23,7 +23,6 @@
 void task_button(void* argument)
 {
     uint32_t button_counter = 0;
-
     LOGGER_INFO("Button task initialized");
 
 #ifdef MULTIPLE_TASK_MULTIPLE_AO
@@ -79,14 +78,22 @@ void task_button(void* argument)
 
 			if (BUTTON_TYPE_NONE != event)
 			{
+                LOGGER_INFO("Button event duration: %lu ms", button_counter);
+
 				ao_event_t *msg = (ao_event_t*) memory_pool_block_get(&memory_pool);
 				if (msg != NULL)
 				{
+                    // Log the contents of the message after assignment
+                    LOGGER_INFO("Message prepared: recipient=%d, event_data.button_event=%d, callback_free=%p",
+                                msg->recipient, msg->event_data.button_event, (void*)msg->callback_free);
+
 					msg->recipient = AO_ID_UI;
 					msg->event_data.button_event = event;
 					msg->callback_free = memory_pool_block_free;
 					xQueueSend(dispatcher_queue, &msg, 0);
+                    LOGGER_INFO("Message dispatched");
 				}
+	            button_counter = 0;
 			}
 		}
 		vTaskDelay(pdMS_TO_TICKS(BUTTON_PERIOD_MS_));
