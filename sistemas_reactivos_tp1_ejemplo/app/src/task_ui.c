@@ -13,8 +13,12 @@
 #include "app.h"
 #include "task_led.h"
 
+// #define MULTIPLE_TASK_MULTIPLE_AO
+#define SINGLE_TASK_MULTIPLE_AO
+
 void task_ui(void* argument)
 {
+#ifdef MULTIPLE_TASK_MULTIPLE_AO
 	ui_task_params_t *params = (ui_task_params_t*) argument;
 
     button_event_t event;
@@ -53,5 +57,31 @@ void task_ui(void* argument)
             vTaskDelay(pdMS_TO_TICKS(5));
         }
     }
+#endif
 }
 
+#ifdef SINGLE_TASK_MULTIPLE_AO
+void handle_ui_event(button_event_t event) {
+	ao_event_t* msg = (ao_event_t*) memory_pool_block_get(&memblock);
+    if (msg != NULL) {
+        switch (event) {
+            case BUTTON_TYPE_PULSE:
+                msg->recipient = AO_ID_LED_RED;
+                msg->event_data.led_event = LED_RED_ON;
+                break;
+            case BUTTON_TYPE_SHORT:
+                msg->recipient = AO_ID_LED_YELLOW;
+                msg->event_data.led_event = LED_YELLOW_ON;
+                break;
+            case BUTTON_TYPE_LONG:
+                msg->recipient = AO_ID_LED_BLUE;
+                msg->event_data.led_event = LED_BLUE_ON;
+                break;
+            default:
+                return;
+        }
+        msg->callback_free = memory_pool_block_put;
+        xQueueSend(dispatcher_queue, &msg, 0);
+    }
+}
+#endif

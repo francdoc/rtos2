@@ -32,8 +32,8 @@
  * @author : Sebastian Bedin <sebabedin@gmail.com>
  */
 
-#ifndef TASK_UI_H_
-#define TASK_UI_H_
+#ifndef TASK_DISPATCHER_H_
+#define TASK_DISPATCHER_H_
 
 /********************** CPP guard ********************************************/
 #ifdef __cplusplus
@@ -45,26 +45,18 @@ extern "C" {
 /********************** macros ***********************************************/
 
 /********************** typedef **********************************************/
-typedef enum
-{
-  BUTTON_TYPE_NONE,
-  BUTTON_TYPE_PULSE,
-  BUTTON_TYPE_SHORT,
-  BUTTON_TYPE_LONG,
-  BUTTON_TYPE__N,
-} button_event_t;
+
 /********************** external data declaration ****************************/
 
 /********************** external functions declaration ***********************/
 
-void task_ui(void* argument);
-void handle_ui_event(button_event_t event);
+void task_dispatcher(void *argument);
 
 /********************** End of CPP guard *************************************/
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* TASK_UI_H_ */
+#endif /* TASK_DISPATCHER_H_ */
 /********************** end of file ******************************************/
 

@@ -12,6 +12,11 @@ extern "C" {
 #include "task_ui.h"
 #include "task_led.h"
 
+#include "memory_pool.h"
+
+// #define MULTIPLE_TASK_MULTIPLE_AO
+#define SINGLE_TASK_MULTIPLE_AO
+
 /********************** external data declaration ****************************/
 
 typedef struct {
@@ -32,6 +37,28 @@ typedef struct {
 typedef struct {
 	active_object_t led_ao;
 } led_task_params_t;
+
+typedef enum {
+	AO_ID_UI,
+	AO_ID_LED_RED,
+	AO_ID_LED_YELLOW,
+	AO_ID_LED_BLUE,
+} ao_id_t;
+
+// one message to rule them AO all
+typedef struct {
+	ao_id_t recipient;
+	union {
+		button_event_t button_event;
+		led_event_t led_event;
+	} event_data;
+	void (*callback_free)(void*); // callback to free memory
+} ao_event_t;
+
+extern memory_pool_t memory_pool; // global memory pool
+extern QueueHandle_t dispatcher_queue; //global message queue
+
+void handle_led_event(ao_id_t led_id, led_event_t event);
 
 /********************** external functions declaration ***********************/
 void app_init(void);
