@@ -10,10 +10,8 @@
 #include "task_led.h"
 #include "task_ui.h"
 #include "task_dispatcher.h"
-#include "app.h"
 
-// #define MULTIPLE_TASK_MULTIPLE_AO
-#define SINGLE_TASK_MULTIPLE_AO
+#include "app.h"
 
 #ifdef SINGLE_TASK_MULTIPLE_AO
 #include "memory_pool.h"
@@ -38,6 +36,12 @@ static ui_task_params_t ui_task_params;
 static led_task_params_t led_red_params;
 static led_task_params_t led_blue_params;
 static led_task_params_t led_yellow_params;
+#endif
+
+#ifdef SINGLE_TASK_MULTIPLE_AO
+void memory_pool_block_free(void *pblock) {
+    memory_pool_block_put(&memory_pool, pblock);
+}
 #endif
 
 void app_init(void)

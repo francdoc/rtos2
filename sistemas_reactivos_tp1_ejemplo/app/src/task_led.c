@@ -13,9 +13,6 @@
 #include "app.h"
 #include "task_led.h"
 
-// #define MULTIPLE_TASK_MULTIPLE_AO
-#define SINGLE_TASK_MULTIPLE_AO
-
 #define BLINK_DELAY_MS (1000)
 
 void task_led(void* argument)
@@ -26,6 +23,7 @@ void task_led(void* argument)
 
     LOGGER_INFO("LED task initialized");
 
+#ifdef MULTIPLE_TASK_MULTIPLE_AO
     while (true)
     {
         // Receive event from queue
@@ -33,6 +31,7 @@ void task_led(void* argument)
         {
             LOGGER_INFO("Event received in LED task: %d", event);  // Log received event
 
+            // LED action based on event type
             // NOTE 1: Using global queue handles, while convenient, can lead to potential issues in concurrent systems.
             //         A better approach would be to encapsulate the queue handle in an "active object" structure,
             //         allowing us to access the specific memory region holding the queue handle, reducing the risk of conflicts in a multithreaded environment.
@@ -42,7 +41,7 @@ void task_led(void* argument)
 
             switch (event)
             {
-                case LED_RED_BLINK: // from led_red_queue
+                case LED_RED_BLINK:
                     LOGGER_INFO("LED set to RED blink");
                     HAL_GPIO_WritePin(LED_RED_PORT, LED_RED_PIN, GPIO_PIN_SET);
                     vTaskDelay(pdMS_TO_TICKS(BLINK_DELAY_MS));
@@ -50,7 +49,7 @@ void task_led(void* argument)
                     vTaskDelay(pdMS_TO_TICKS(BLINK_DELAY_MS));
                     break;
 
-                case LED_YELLOW_BLINK: // from led_yellow_queue
+                case LED_YELLOW_BLINK:
                     LOGGER_INFO("LED set to YELLOW blink");
                     HAL_GPIO_WritePin(LED_YELLOW_PORT, LED_YELLOW_PIN, GPIO_PIN_SET);
                     vTaskDelay(pdMS_TO_TICKS(BLINK_DELAY_MS));
@@ -58,7 +57,7 @@ void task_led(void* argument)
                     vTaskDelay(pdMS_TO_TICKS(BLINK_DELAY_MS));
                     break;
 
-                case LED_BLUE_BLINK: // from led_blue_queue
+                case LED_BLUE_BLINK:
                     LOGGER_INFO("LED set to BLUE blink");
                     HAL_GPIO_WritePin(LED_BLUE_PORT, LED_BLUE_PIN, GPIO_PIN_SET);
                     vTaskDelay(pdMS_TO_TICKS(BLINK_DELAY_MS));
@@ -72,6 +71,7 @@ void task_led(void* argument)
             }
         }
     }
+#endif
 }
 
 #ifdef SINGLE_TASK_MULTIPLE_AO
@@ -103,3 +103,4 @@ void handle_led_event(ao_id_t led_id, led_event_t event) {
     }
 }
 #endif
+

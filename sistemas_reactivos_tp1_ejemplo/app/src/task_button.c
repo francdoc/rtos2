@@ -1,4 +1,4 @@
-//task_button.c
+// task_button.c
 
 #include <stdio.h>
 #include <stdint.h>
@@ -12,9 +12,6 @@
 
 #include "app.h"
 #include "task_ui.h"
-
-// #define MULTIPLE_TASK_MULTIPLE_AO
-#define SINGLE_TASK_MULTIPLE_AO
 
 #define TASK_PERIOD_MS_           (5)
 #define BUTTON_PERIOD_MS_         (TASK_PERIOD_MS_)
@@ -50,11 +47,8 @@ void task_button(void* argument)
 
             if (BUTTON_TYPE_NONE != event)
             {
-                // Log button duration before sending the event
                 LOGGER_INFO("Button event duration: %lu ms", button_counter);
-                xQueueSend(params->ui_queue_h, &event, ( TickType_t ) 0);
-
-                // Log the sent event
+                xQueueSend(params->ui_queue_h, &event, (TickType_t) 0);
                 LOGGER_INFO("Sent event to UI queue: %d", event);
             }
 
@@ -84,12 +78,12 @@ void task_button(void* argument)
 
 			if (BUTTON_TYPE_NONE != event)
 			{
-				ao_event_t *msg = (ao_event_t*) memory_pool_block_get(&memblock);
+				ao_event_t *msg = (ao_event_t*) memory_pool_block_get(&memory_pool);
 				if (msg != NULL)
 				{
 					msg->recipient = AO_ID_UI;
 					msg->event_data.button_event = event;
-					msg->callback_free = memory_pool_block_put;
+					msg->callback_free = memory_pool_block_free;
 					xQueueSend(dispatcher_queue, &msg, 0);
 				}
 			}
@@ -99,5 +93,4 @@ void task_button(void* argument)
 #endif
 }
 
-/********************** end of file ******************************************/
 

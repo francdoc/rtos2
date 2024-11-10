@@ -1,8 +1,7 @@
+// task_dispatcher.c
+
 #include "app.h"
 #include "logger.h"
-
-// #define MULTIPLE_TASK_MULTIPLE_AO
-#define SINGLE_TASK_MULTIPLE_AO
 
 void task_dispatcher(void *argument) {
 #ifdef SINGLE_TASK_MULTIPLE_AO
@@ -16,14 +15,15 @@ void task_dispatcher(void *argument) {
 			case AO_ID_LED_RED:
 			case AO_ID_LED_YELLOW:
 			case AO_ID_LED_BLUE:
-				handle_led_event(event_ptr->recipient, event, event_ptr->event_data.led_event);
+				handle_led_event(event_ptr->recipient, event_ptr->event_data.led_event);
 				break;
 			default:
 				LOGGER_INFO("Unknown AO ID");
 				break;
 			}
-		event_ptr->callback_free(event_ptr);
+			event_ptr->callback_free(event_ptr);
 		}
 	}
 #endif
 }
+

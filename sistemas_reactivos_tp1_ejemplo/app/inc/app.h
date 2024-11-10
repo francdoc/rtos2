@@ -14,7 +14,7 @@ extern "C" {
 
 #include "memory_pool.h"
 
-// #define MULTIPLE_TASK_MULTIPLE_AO
+//#define MULTIPLE_TASK_MULTIPLE_AO
 #define SINGLE_TASK_MULTIPLE_AO
 
 /********************** external data declaration ****************************/
@@ -38,6 +38,7 @@ typedef struct {
 	active_object_t led_ao;
 } led_task_params_t;
 
+// Identificadores de AO
 typedef enum {
 	AO_ID_UI,
 	AO_ID_LED_RED,
@@ -45,7 +46,9 @@ typedef enum {
 	AO_ID_LED_BLUE,
 } ao_id_t;
 
-// one message to rule them AO all
+
+#ifdef SINGLE_TASK_MULTIPLE_AO
+// Estructura de mensaje para comunicación entre AOs
 typedef struct {
 	ao_id_t recipient;
 	union {
@@ -55,10 +58,12 @@ typedef struct {
 	void (*callback_free)(void*); // callback to free memory
 } ao_event_t;
 
-extern memory_pool_t memory_pool; // global memory pool
-extern QueueHandle_t dispatcher_queue; //global message queue
+extern memory_pool_t memory_pool; // global memory pool for single-task configuration
+extern QueueHandle_t dispatcher_queue; // global message queue for single-task configuration
 
 void handle_led_event(ao_id_t led_id, led_event_t event);
+
+#endif
 
 /********************** external functions declaration ***********************/
 void app_init(void);
