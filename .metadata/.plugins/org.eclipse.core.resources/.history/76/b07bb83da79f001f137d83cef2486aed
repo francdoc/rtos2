@@ -37,8 +37,8 @@ void task_dispatcher(void *argument) {
 #ifdef SINGLE_TASK_MULTIPLE_AO
 	 ao_event_t* event_ptr;
 	    while (true) {
-	    	// NOTA: hot loop that checks in a cyclic way 4 queues. Another way is to use a global queue and pass it on to each active object, check RobAxt implementation for TP2 (they do not create 4 queues, just 1 flagged with a True/False condition.
 
+	    	// NOTA: hot loop that checks in a cyclic way 4 queues
 	        // Check each AO queue for events
 	        if (xQueueReceive(ui_queue, &event_ptr, 0) == pdPASS) {
 	            LOGGER_INFO("UI Event received");
