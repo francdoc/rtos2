@@ -37,21 +37,36 @@ void task_dispatcher(void *argument) {
 #ifdef SINGLE_TASK_MULTIPLE_AO
 	 ao_event_t* event_ptr;
 	    while (true) {
-	    	// NOTA: loop that checks in a cyclic way 4 queues. Another way is to use a global queue and pass it on to each active object, check RobAxt implementation for TP2 (they do not create 4 queues, just 1 flagged with a True/False condition).
-	    	// NOTA: in here you could make a call to a function_pointer that dispatches the messages according to AO ID. And this function_pointer can be associated to the corresponding AO data structure.
+	    	// NOTE 1: loop that checks in a cyclic way 4 queues. Another way is to use a global queue and pass it on to each active object, check RobAxt implementation for TP2 (they do not create 4 queues, just 1 flagged with a True/False condition).
+	    	// NOTE 2: in here you could make a call to a function_pointer that dispatches the messages according to AO ID. And this function_pointer can be associated to the corresponding AO data structure.
 	    	// 		 And the event message has to contain the event and this AO data structure.
 
 	    	// SUMMARY:
-	    	// 			- make a task that receives a message
-	    	// 			- inside the received message there is: an event and also a pointer to an AO structure (this message was sent by a generic AO send function that needs a specific AO structure as input)
-	    	// 			- from this function pointer you make a process message callback (in the case of UI process message callback, inside that function you define the specific AO structure as input for the generic AO send function)
-	    	// 			- which inside it can do for example another queue send or execute some kind of action
+	    	// 			- make a task that receives a message.
+	    	// 			- inside the received message there is: an event and also a pointer to an AO structure (this message was sent by a generic AO send function that needs a specific AO structure as input).
+	    	// 			- from this function pointer you make a process message callback (in the case of UI process message callback, inside that function you define the specific AO structure as input for the generic AO send function).
+	    	// 			- which inside it can do for example another queue send or execute some kind of action.
 
 	        // Check each AO queue for events
 	        if (xQueueReceive(ui_queue, &event_ptr, 0) == pdPASS) {
 	            LOGGER_INFO("UI Event received");
-	            handle_ui_event(event_ptr->event_data.button_event);
-	            event_ptr->callback_free(event_ptr);
+	            LOGGER_INFO("Going to execute UI event process callback");
+				event_ptr->callback_process_event(event_ptr->event_data.button_event);
+	            // handle_ui_event(event_ptr->event_data.button_event); // NOTE: commented out to try function pointer concept
+
+				/* NOTE:
+				 * To implement function pointers for handling all events, it's important to standardize the interface
+				 * for these function pointers. This means designing a unified data structure that can consistently
+				 * pass function pointers and the associated data across different active objects (AOs).
+				 *
+				 * By creating a standard interface, we ensure compatibility across various event processing functions,
+				 * allowing each AO to define its own event handler while still adhering to a common function signature.
+				 *
+				 * void (*callback_process_event)(button_event_t) is compatible with void handle_ui_event(button_event_t event) {
+				 * but is not compatible with void handle_led_event(ao_id_t led_id, led_event_t event)
+				 */
+
+				event_ptr->callback_free(event_ptr);
 	        }
 
 	        if (xQueueReceive(led_red_queue, &event_ptr, 0) == pdPASS) {

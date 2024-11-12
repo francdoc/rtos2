@@ -104,7 +104,6 @@ void handle_led_event(ao_id_t led_id, led_event_t event) {
 #endif
 
 #ifdef SINGLE_TASK_MULTIPLE_AO
-
 void handle_led_event(ao_id_t led_id, led_event_t event) {
     GPIO_TypeDef* port;
     uint16_t pin;
