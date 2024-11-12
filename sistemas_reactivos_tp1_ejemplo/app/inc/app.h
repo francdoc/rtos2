@@ -96,6 +96,19 @@ typedef struct {
     void (*callback_free)(void*);
 } ao_event_t;
 
+typedef struct {
+    ao_id_t recipient;
+    union {
+        button_event_t button_event;
+        led_event_t led_event;
+    } event_data;
+    void (*callback_free)(void*);
+} ao_event_t;
+
+typedef struct {
+    void (*callback_process_event)(ao_event_t);
+} ao_t; // the queue in this case is global, so I do not associate it to ao_t;
+    
 extern memory_pool_t memory_pool;
 extern QueueHandle_t ui_queue;
 extern QueueHandle_t led_red_queue;

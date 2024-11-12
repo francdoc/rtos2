@@ -62,11 +62,18 @@ void task_dispatcher(void *argument) {
 			* By creating a standard interface, we ensure compatibility across various event processing functions,
 			* allowing each AO to define its own event handler while still adhering to a common function signature.
 			*
-			* void (*callback_process_event)(button_event_t) is compatible with void handle_ui_event(button_event_t event) {
-			* but is not compatible with void handle_led_event(ao_id_t led_id, led_event_t event)
+			* The function pointer void (*callback_process_event)(button_event_t) is compatible with 
+			* void handle_ui_event(button_event_t event) but is incompatible with void handle_led_event(ao_id_t led_id, led_event_t event).
+			* 
+			* To work around this limitation, we need to pass a generic data structure to callback_process_event. This data structure
+			* should contain all necessary information, such as the AO ID and specific event data, allowing each handler to interpret
+			* the data according to its requirements. Inside each handle function (e.g., UI or LED), we can then extract and process 
+			* the components of this data structure as needed. 
+			*
+			* This approach enables a unified event handling interface that supports both single-parameter and multi-parameter functions, 
+			* making it flexible enough to accommodate various event signatures.
 			*/
-
-event_ptr->callback_free(event_ptr);
+			event_ptr->callback_free(event_ptr);
 	        }
 
 	        if (xQueueReceive(led_red_queue, &event_ptr, 0) == pdPASS) {
@@ -86,7 +93,6 @@ event_ptr->callback_free(event_ptr);
 	            handle_led_event(AO_ID_LED_BLUE, event_ptr->event_data.led_event);
 	            event_ptr->callback_free(event_ptr);
 	        }
-
 	        vTaskDelay(pdMS_TO_TICKS(10)); // Adjust polling rate if necessary
 	    }
 #endif
