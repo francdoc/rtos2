@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Sebastian Bedin <sebabedin@gmail.com>.
+ * Copyright (c) 2024 Sebastian Bedin <sebabedin@gmail.com>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -30,10 +30,11 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @author : Sebastian Bedin <sebabedin@gmail.com>
+ * @version v1.0.0
  */
 
-#ifndef TASK_UI_H_
-#define TASK_UI_H_
+#ifndef MEMORY_POOL_H_
+#define MEMORY_POOL_H_
 
 /********************** CPP guard ********************************************/
 #ifdef __cplusplus
@@ -42,21 +43,40 @@ extern "C" {
 
 /********************** inclusions *******************************************/
 
+#include <stdio.h>
+#include <stdint.h>
+#include <stdbool.h>
+
+#include "linked_list.h"
+
 /********************** macros ***********************************************/
 
 /********************** typedef **********************************************/
+
+typedef struct
+{
+    linked_list_t block_list;
+} memory_pool_t;
+
+typedef linked_list_node_t memory_pool_block_t;
+
+#define MEMORY_POOL_SIZE(nblocks, block_size)    ((nblocks)*(block_size))
 
 /********************** external data declaration ****************************/
 
 /********************** external functions declaration ***********************/
 
-void task_ui(void* argument);
+void memory_pool_init(memory_pool_t* hmp, void* pmemory, size_t memory_size, size_t block_size);
+
+void* memory_pool_block_get(memory_pool_t* hmp);
+
+void memory_pool_block_put(memory_pool_t* hmp, void* pblock);
 
 /********************** End of CPP guard *************************************/
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* TASK_UI_H_ */
+#endif /* MEMORY_POOL_H_ */
 /********************** end of file ******************************************/
 

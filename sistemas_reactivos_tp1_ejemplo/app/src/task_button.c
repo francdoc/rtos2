@@ -1,3 +1,5 @@
+// task_button.c
+
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
@@ -22,6 +24,11 @@ void task_button(void* argument)
 {
     uint32_t button_counter = 0;
 
+    LOGGER_INFO("Button task initialized");
+
+#ifdef MULTIPLE_TASK_MULTIPLE_AO
+	button_task_params_t *params = (button_task_params_t*) argument;
+
     while (true)
     {
         GPIO_PinState button_state = HAL_GPIO_ReadPin(BUTTON_PORT, BUTTON_PIN);
@@ -41,11 +48,8 @@ void task_button(void* argument)
 
             if (BUTTON_TYPE_NONE != event)
             {
-                // Log button duration before sending the event
                 LOGGER_INFO("Button event duration: %lu ms", button_counter);
-                xQueueSend(ui_queue, &event, ( TickType_t ) 0);
-
-                // Log the sent event
+                xQueueSend(params->ui_queue_h, &event, (TickType_t) 0);
                 LOGGER_INFO("Sent event to UI queue: %d", event);
             }
 
@@ -53,7 +57,85 @@ void task_button(void* argument)
         }
         vTaskDelay(pdMS_TO_TICKS(BUTTON_PERIOD_MS_));
     }
+#endif
+
+#ifdef SINGLE_TASK_SINGLE_AO
+    while (true)
+    {
+    	GPIO_PinState button_state = HAL_GPIO_ReadPin(BUTTON_PORT, BUTTON_PIN);
+		if (button_state == GPIO_PIN_SET)
+		{
+			button_counter += BUTTON_PERIOD_MS_;
+		}
+		else
+		{
+			button_event_t event = BUTTON_TYPE_NONE;
+			if (button_counter >= LONG_BUTTON_LOWER_LIMIT_MS)
+				event = BUTTON_TYPE_LONG; // to led_blue_queue
+			else if (button_counter >= SHORT_BUTTON_UPPER_LIMIT_MS && button_counter <= LONG_BUTTON_LOWER_LIMIT_MS)
+				event = BUTTON_TYPE_SHORT;  // to led_yellow_queue
+			else if (button_counter >= PULSE_BUTTON_LOWER_LIMIT_MS && button_counter <= SHORT_BUTTON_UPPER_LIMIT_MS)
+				event = BUTTON_TYPE_PULSE; // to led_red_queue
+
+			if (BUTTON_TYPE_NONE != event)
+			{
+                LOGGER_INFO("Button event duration: %lu ms", button_counter);
+
+				ao_event_t *msg = (ao_event_t*) memory_pool_block_get(&memory_pool);
+				if (msg != NULL)
+				{
+                    // Log the contents of the message after assignment
+                    LOGGER_INFO("Message prepared: recipient=%d, event_data.button_event=%d, callback_free=%p",
+                                msg->recipient, msg->event_data.button_event, (void*)msg->callback_free);
+
+					msg->recipient = AO_ID_UI;
+					msg->event_data.button_event = event;
+					msg->callback_free = memory_pool_block_free;
+					xQueueSend(dispatcher_queue, &msg, 0);
+                    LOGGER_INFO("Message dispatched");
+				}
+	            button_counter = 0;
+			}
+		}
+		vTaskDelay(pdMS_TO_TICKS(BUTTON_PERIOD_MS_));
+    }
+#endif
+
+#ifdef SINGLE_TASK_MULTIPLE_AO
+    while (true) {
+            GPIO_PinState button_state = HAL_GPIO_ReadPin(BUTTON_PORT, BUTTON_PIN);
+
+            if (button_state == GPIO_PIN_SET) {
+                button_counter += BUTTON_PERIOD_MS_;
+            } else {
+                button_event_t event = BUTTON_TYPE_NONE;
+
+                if (button_counter >= LONG_BUTTON_LOWER_LIMIT_MS) {
+                    event = BUTTON_TYPE_LONG;
+                } else if (button_counter >= SHORT_BUTTON_UPPER_LIMIT_MS) {
+                    event = BUTTON_TYPE_SHORT;
+                } else if (button_counter >= PULSE_BUTTON_LOWER_LIMIT_MS) {
+                    event = BUTTON_TYPE_PULSE;
+                }
+
+                if (event != BUTTON_TYPE_NONE) {
+                    ao_event_t* msg = (ao_event_t*) memory_pool_block_get(&memory_pool);
+
+                    if (msg != NULL) {
+                        msg->callback_free = memory_pool_block_free;
+
+                        // Send event to the UI AO
+                        msg->recipient = AO_ID_UI;
+                        msg->event_data.button_event = event;
+                        LOGGER_INFO("Dispatching event to UI queue");
+                        xQueueSend(ui_queue, &msg, 0);
+                    }
+                }
+                button_counter = 0;
+            }
+            vTaskDelay(pdMS_TO_TICKS(BUTTON_PERIOD_MS_));
+        }
+#endif
 }
 
-/********************** end of file ******************************************/
 

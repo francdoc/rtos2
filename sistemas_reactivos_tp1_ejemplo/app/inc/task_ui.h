@@ -58,6 +58,7 @@ typedef enum
 /********************** external functions declaration ***********************/
 
 void task_ui(void* argument);
+void handle_ui_event(button_event_t event);
 
 /********************** End of CPP guard *************************************/
 #ifdef __cplusplus
