@@ -96,6 +96,19 @@ typedef struct {
     void (*callback_free)(void*);
 } ao_event_t;
 
+/* NOTE:
+ * The design of the data structure below, `ao_event_t`, is motivated by the need for a single, unified function pointer (`callback_process_event`) 
+ * that can handle events across multiple Active Objects (AOs) with varying event types and parameters.
+ *
+ * To accomplish this, we use `ao_event_t`, which contains a union to store different types of event data (e.g., `button_event_t` and `led_event_t`) 
+ * and an `ao_id_t` recipient identifier to specify the target AO. This structure allows each callback function, such as `handle_ui_event` 
+ * or `handle_led_event`, to interpret the event data accordingly based on the recipient ID.
+ *
+ * This setup provides a flexible and standardized event-processing interface across AOs, simplifying the code structure 
+ * and making it more maintainable by enabling each AO to process its events within a common handler signature.
+ */
+
+/*
 typedef struct {
     ao_id_t recipient;
     union {
@@ -107,8 +120,10 @@ typedef struct {
 
 typedef struct {
     void (*callback_process_event)(ao_event_t);
-} ao_t; // the queue in this case is global, so I do not associate it to ao_t;
-    
+    QueueHandle_t event_queue_h; // queue for event recv
+} ao_t;
+*/
+  
 extern memory_pool_t memory_pool;
 extern QueueHandle_t ui_queue;
 extern QueueHandle_t led_red_queue;

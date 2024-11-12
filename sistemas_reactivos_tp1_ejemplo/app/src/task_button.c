@@ -123,7 +123,7 @@ void task_button(void* argument)
 
                     if (msg != NULL) {
                         msg->callback_free = memory_pool_block_free;
-                        msg->callback_process_event = handle_ui_event;
+                        msg->callback_process_event = handle_ui_event; // we can assign callback process here because this structure is global
 
                         // Send event to the UI AO
                         msg->recipient = AO_ID_UI;
