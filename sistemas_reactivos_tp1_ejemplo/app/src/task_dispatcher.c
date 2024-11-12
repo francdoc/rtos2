@@ -49,24 +49,24 @@ void task_dispatcher(void *argument) {
 
 	        // Check each AO queue for events
 	        if (xQueueReceive(ui_queue, &event_ptr, 0) == pdPASS) {
-	            LOGGER_INFO("UI Event received");
-	            LOGGER_INFO("Going to execute UI event process callback");
-				event_ptr->callback_process_event(event_ptr->event_data.button_event);
-				// handle_ui_event(event_ptr->event_data.button_event); // NOTE: commented out to try function pointer concept
+			LOGGER_INFO("UI Event received");
+			LOGGER_INFO("Going to execute UI event process callback");
+			event_ptr->callback_process_event(event_ptr->event_data.button_event);
+			// handle_ui_event(event_ptr->event_data.button_event); // NOTE: commented out to try function pointer concept
 
-				/* NOTE:
-				* To implement function pointers for handling all events, it's important to standardize the interface
-				* for these function pointers. This means designing a unified data structure that can consistently
-				* pass function pointers and the associated data across different active objects (AOs).
-				*
-				* By creating a standard interface, we ensure compatibility across various event processing functions,
-				* allowing each AO to define its own event handler while still adhering to a common function signature.
-				*
-				* void (*callback_process_event)(button_event_t) is compatible with void handle_ui_event(button_event_t event) {
-				* but is not compatible with void handle_led_event(ao_id_t led_id, led_event_t event)
-				*/
+			/* NOTE:
+			* To implement function pointers for handling all events, it's important to standardize the interface
+			* for these function pointers. This means designing a unified data structure that can consistently
+			* pass function pointers and the associated data across different active objects (AOs).
+			*
+			* By creating a standard interface, we ensure compatibility across various event processing functions,
+			* allowing each AO to define its own event handler while still adhering to a common function signature.
+			*
+			* void (*callback_process_event)(button_event_t) is compatible with void handle_ui_event(button_event_t event) {
+			* but is not compatible with void handle_led_event(ao_id_t led_id, led_event_t event)
+			*/
 
-				event_ptr->callback_free(event_ptr);
+event_ptr->callback_free(event_ptr);
 	        }
 
 	        if (xQueueReceive(led_red_queue, &event_ptr, 0) == pdPASS) {
