@@ -129,10 +129,10 @@ void app_init(void)
 #ifdef SINGLE_TASK_MULTIPLE_AO
 	memory_pool_init(&memory_pool, memblock, 10, sizeof(ao_event_t));
 
-	ui_queue = xQueueCreate(10, sizeof(ao_event_t*));
-	led_red_queue = xQueueCreate(10, sizeof(ao_event_t*));
-	led_yellow_queue = xQueueCreate(10, sizeof(ao_event_t*));
-	led_blue_queue = xQueueCreate(10, sizeof(ao_event_t*));
+	ui_queue = xQueueCreate(MEMORY_POOL_SIZE, sizeof(ao_event_t*));
+	led_red_queue = xQueueCreate(MEMORY_POOL_SIZE, sizeof(ao_event_t*));
+	led_yellow_queue = xQueueCreate(MEMORY_POOL_SIZE, sizeof(ao_event_t*));
+	led_blue_queue = xQueueCreate(MEMORY_POOL_SIZE, sizeof(ao_event_t*));
 
 	configASSERT(ui_queue && led_red_queue && led_yellow_queue && led_blue_queue);
 

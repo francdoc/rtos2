@@ -78,8 +78,9 @@ void handle_led_event(ao_id_t led_id, led_event_t event);
 void memory_pool_block_free(void *pblock);
 #endif
 
-
 #ifdef SINGLE_TASK_MULTIPLE_AO
+#define MEMORY_POOL_SIZE 10
+
 typedef enum {
     AO_ID_UI,
     AO_ID_LED_RED,
@@ -97,12 +98,13 @@ typedef struct {
 } ao_event_t;
 
 extern memory_pool_t memory_pool;
+
 extern QueueHandle_t ui_queue;
 extern QueueHandle_t led_red_queue;
 extern QueueHandle_t led_yellow_queue;
 extern QueueHandle_t led_blue_queue;
 
-void memory_pool_block_free(void *pblock);  // Corrected function declaration
+void memory_pool_block_free(void *pblock);
 
 #endif
 

@@ -23,7 +23,6 @@
 void task_button(void* argument)
 {
     uint32_t button_counter = 0;
-
     LOGGER_INFO("Button task initialized");
 
 #ifdef MULTIPLE_TASK_MULTIPLE_AO

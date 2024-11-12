@@ -37,15 +37,9 @@ void task_dispatcher(void *argument) {
 #ifdef SINGLE_TASK_MULTIPLE_AO
 	 ao_event_t* event_ptr;
 	    while (true) {
-	    	// NOTA: loop that checks in a cyclic way 4 queues. Another way is to use a global queue and pass it on to each active object, check RobAxt implementation for TP2 (they do not create 4 queues, just 1 flagged with a True/False condition).
-	    	// NOTA: in here you could make a call to a function_pointer that dispatches the messages according to AO ID. And this function_pointer can be associated to the corresponding AO data structure.
+	    	// NOTA: hot loop that checks in a cyclic way 4 queues. Another way is to use a global queue and pass it on to each active object, check RobAxt implementation for TP2 (they do not create 4 queues, just 1 flagged with a True/False condition.
+	    	// NOTA: in here you could make a call to a function_pointer that dispatches the messages according to AO ID. And this function_pointer can be associated to the corresponding AO structure.
 	    	// 		 And the event message has to contain the event and this AO data structure.
-
-	    	// SUMMARY:
-	    	// 			- make a task that receives a message
-	    	// 			- inside the received message there is: an event and also a pointer to an AO structure (this message was sent by a generic AO send function that needs a specific AO structure as input)
-	    	// 			- from this function pointer you make a process message callback (in the case of UI process message callback, inside that function you define the specific AO structure as input for the generic AO send function)
-	    	// 			- which inside it can do for example another queue send or execute some kind of action
 
 	        // Check each AO queue for events
 	        if (xQueueReceive(ui_queue, &event_ptr, 0) == pdPASS) {

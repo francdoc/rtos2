@@ -20,13 +20,6 @@ memory_pool_t memory_pool;
 static uint8_t memblock[MEMORY_POOL_SIZE(10,sizeof(ao_event_t))];
 #endif
 
-#ifdef SINGLE_TASK_MULTIPLE_AO
-#include "memory_pool.h"
-QueueHandle_t dispatcher_queue;
-memory_pool_t memory_pool;
-static uint8_t memblock[MEMORY_POOL_SIZE(10,sizeof(ao_event_t))];
-#endif
-
 // NOTE: now I will not make the queue handles extern (global).
 //		 I can encapsulate them within the app.c file, keeping them private to that file. Instead of using extern declarations in app.h.
 // 		 So that we can manage all the queue handles through active_object_t instances without exposing them externally.
@@ -52,9 +45,8 @@ void memory_pool_block_free(void *pblock) {
 #endif
 
 #ifdef SINGLE_TASK_MULTIPLE_AO
-void memory_pool_block_free(void *pblock) {
-    memory_pool_block_put(&memory_pool, pblock);
-}
+memory_pool_t memory_pool;
+static uint8_t memory_pool_memory[MEMORY_POOL_SIZE(MEMORY_POOL_SIZE, sizeof(ao_event_t))];
 
 QueueHandle_t ui_queue;
 QueueHandle_t led_red_queue;
@@ -126,21 +118,8 @@ void app_init(void)
     xTaskCreate(task_dispatcher, "Dispatcher Task", 256, NULL, tskIDLE_PRIORITY, NULL);
 #endif
 
-#ifdef SINGLE_TASK_MULTIPLE_AO
-	memory_pool_init(&memory_pool, memblock, 10, sizeof(ao_event_t));
-
-	ui_queue = xQueueCreate(10, sizeof(ao_event_t*));
-	led_red_queue = xQueueCreate(10, sizeof(ao_event_t*));
-	led_yellow_queue = xQueueCreate(10, sizeof(ao_event_t*));
-	led_blue_queue = xQueueCreate(10, sizeof(ao_event_t*));
-
-	configASSERT(ui_queue && led_red_queue && led_yellow_queue && led_blue_queue);
-
-	xTaskCreate(task_button, "Button Task", 256, NULL, tskIDLE_PRIORITY, NULL);
-	xTaskCreate(task_dispatcher, "Dispatcher Task", 256, NULL, tskIDLE_PRIORITY, NULL);
-#endif
-
     LOGGER_INFO("App initialized");
+
     cycle_counter_init();
 }
 

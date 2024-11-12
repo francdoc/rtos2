@@ -96,7 +96,7 @@ void handle_ui_event(button_event_t event) {
 void handle_ui_event(button_event_t event) {
     ao_event_t* msg = (ao_event_t*) memory_pool_block_get(&memory_pool);
     if (msg != NULL) {
-        msg->callback_free = memory_pool_block_free;  // Set callback to free memory
+        msg->callback_free = memory_pool_block_free;
 
         switch (event) {
             case BUTTON_TYPE_PULSE:
@@ -118,7 +118,7 @@ void handle_ui_event(button_event_t event) {
                 LOGGER_INFO("Sent LED_BLUE_ON to blue queue");
                 break;
             default:
-                memory_pool_block_free(msg);  // Corrected call to match single-argument signature
+                memory_pool_block_free(&memory_pool, msg);  // Free unused message
                 return;
         }
     }

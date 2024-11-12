@@ -44,7 +44,7 @@ void task_dispatcher(void *argument) {
 	    	// SUMMARY:
 	    	// 			- make a task that receives a message
 	    	// 			- inside the received message there is: an event and also a pointer to an AO structure (this message was sent by a generic AO send function that needs a specific AO structure as input)
-	    	// 			- from this function pointer you make a process message callback (in the case of UI process message callback, inside that function you define the specific AO structure as input for the generic AO send function)
+	    	// 			- from this function pointer you make a process message callback (in the case of UI process message callback, inside that function you define the specific AO structure as input for the send action)
 	    	// 			- which inside it can do for example another queue send or execute some kind of action
 
 	        // Check each AO queue for events

@@ -92,6 +92,7 @@ void handle_ui_event(button_event_t event) {
 }
 #endif
 
+
 #ifdef SINGLE_TASK_MULTIPLE_AO
 void handle_ui_event(button_event_t event) {
     ao_event_t* msg = (ao_event_t*) memory_pool_block_get(&memory_pool);

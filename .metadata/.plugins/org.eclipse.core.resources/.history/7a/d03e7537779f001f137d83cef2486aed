@@ -14,9 +14,9 @@ extern "C" {
 
 #include "memory_pool.h"
 
-// #define MULTIPLE_TASK_MULTIPLE_AO
+#define MULTIPLE_TASK_MULTIPLE_AO
 // #define SINGLE_TASK_SINGLE_AO
-#define SINGLE_TASK_MULTIPLE_AO
+// #define SINGLE_TASK_MULTIPLE_AO
 
 /********************** external data declaration ****************************/
 typedef enum
@@ -33,7 +33,7 @@ typedef enum
   LED_BLUE_BLINK,
 } led_event_t;
 
-#ifdef MULTIPLE_TASK_MULTIPLE_AO
+#define MULTIPLE_TASK_MULTIPLE_AO
 typedef struct {
 	QueueHandle_t ui_queue_h; // queue for msg dispatching
 } button_task_params_t;
@@ -76,34 +76,6 @@ extern QueueHandle_t dispatcher_queue; // global message queue for single-task c
 
 void handle_led_event(ao_id_t led_id, led_event_t event);
 void memory_pool_block_free(void *pblock);
-#endif
-
-
-#ifdef SINGLE_TASK_MULTIPLE_AO
-typedef enum {
-    AO_ID_UI,
-    AO_ID_LED_RED,
-    AO_ID_LED_YELLOW,
-    AO_ID_LED_BLUE
-} ao_id_t;
-
-typedef struct {
-    ao_id_t recipient;
-    union {
-        button_event_t button_event;
-        led_event_t led_event;
-    } event_data;
-    void (*callback_free)(void*);
-} ao_event_t;
-
-extern memory_pool_t memory_pool;
-extern QueueHandle_t ui_queue;
-extern QueueHandle_t led_red_queue;
-extern QueueHandle_t led_yellow_queue;
-extern QueueHandle_t led_blue_queue;
-
-void memory_pool_block_free(void *pblock);  // Corrected function declaration
-
 #endif
 
 /********************** external functions declaration ***********************/
