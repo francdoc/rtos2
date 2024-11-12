@@ -85,7 +85,8 @@ typedef enum {
     AO_ID_LED_YELLOW,
     AO_ID_LED_BLUE
 } ao_id_t;
-
+ 
+/* // NOTE: commenting out this to use enhanced data structure below
 typedef struct {
     ao_id_t recipient;
     union {
@@ -95,6 +96,12 @@ typedef struct {
     void (*callback_process_event)(button_event_t);
     void (*callback_free)(void*);
 } ao_event_t;
+
+extern QueueHandle_t ui_queue;
+extern QueueHandle_t led_red_queue;
+extern QueueHandle_t led_yellow_queue;
+extern QueueHandle_t led_blue_queue;
+*/
 
 /* NOTE:
  * The design of the data structure below, `ao_event_t`, is motivated by the need for a single, unified function pointer (`callback_process_event`) 
@@ -108,33 +115,23 @@ typedef struct {
  * and making it more maintainable by enabling each AO to process its events within a common handler signature.
  */
 
-/*
 typedef struct {
     ao_id_t recipient;
     union {
         button_event_t button_event;
         led_event_t led_event;
     } event_data;
-    void (*callback_free)(void*);
+    void (*callback_free)(void*); // I want the callback memory free method to be related to the event data structure
 } ao_event_t;
 
 typedef struct {
     void (*callback_process_event)(ao_event_t);
     QueueHandle_t event_queue_h; // queue for event recv
 } ao_t;
-*/
   
 extern memory_pool_t memory_pool;
-extern QueueHandle_t ui_queue;
-extern QueueHandle_t led_red_queue;
-extern QueueHandle_t led_yellow_queue;
-extern QueueHandle_t led_blue_queue;
 
-void handle_led_event(ao_id_t led_id, led_event_t event);
 void memory_pool_block_free(void *pblock);
-
-void memory_pool_block_free(void *pblock);  // Corrected function declaration
-
 #endif
 
 /********************** external functions declaration ***********************/

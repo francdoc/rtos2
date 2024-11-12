@@ -136,6 +136,15 @@ void app_init(void)
 
 	configASSERT(ui_queue && led_red_queue && led_yellow_queue && led_blue_queue);
 
+    /*
+    NOTE (general structure):
+        - Here I can assign to each active object its queue and process event handler.
+        - I can pass to task button the UI active object, so this task can access the UI queue handle
+          and send an event to the UI active object. 
+        - I can pass to task dispatcher the all the active objects, so this task can access all the queue handlers
+          and send an event to any of the LED active objects.
+    */
+
 	xTaskCreate(task_button, "Button Task", 256, NULL, tskIDLE_PRIORITY, NULL);
 	xTaskCreate(task_dispatcher, "Dispatcher Task", 256, NULL, tskIDLE_PRIORITY, NULL);
 #endif
