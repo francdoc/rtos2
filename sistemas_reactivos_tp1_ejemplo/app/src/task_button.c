@@ -132,6 +132,10 @@ void task_button(void* argument)
 					msg->event_data.target_h.queue_yellow_h = ao_all->yellow->event_queue_h;
 					msg->event_data.target_h.queue_blue_h = ao_all->blue->event_queue_h;
 
+					LOGGER_INFO("Button task: queue_red_h=%p, queue_yellow_h=%p, queue_blue_h=%p",
+					            (void*)msg->event_data.target_h.queue_red_h,
+					            (void*)msg->event_data.target_h.queue_yellow_h,
+					            (void*)msg->event_data.target_h.queue_blue_h);
 					// Set the button event data
 					msg->event_data.button_event = event; // WARNING: assign this at the end to avoid corruption
 

@@ -96,6 +96,8 @@ void handle_ui_event(ao_event_t* event) {
     // Log the incoming event and associated button event data
     LOGGER_INFO("UI event process handler: event_data.button_event=%d", event->event_data.button_event);
     LOGGER_INFO("Checking queue_red_h handle: %p", (void*)event->event_data.target_h.queue_red_h);
+    LOGGER_INFO("Checking queue_yellow_h handle: %p", (void*)event->event_data.target_h.queue_yellow_h);
+    LOGGER_INFO("Checking queue_blue_h handle: %p", (void*)event->event_data.target_h.queue_blue_h);
 
     // Allocate memory for the message using pvPortMalloc
     ao_event_t* msg = (ao_event_t*) pvPortMalloc(sizeof(ao_event_t));
