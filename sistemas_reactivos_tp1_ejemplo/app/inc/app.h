@@ -116,22 +116,37 @@ extern QueueHandle_t led_blue_queue;
  */
 
 typedef struct {
+    QueueHandle_t queue_red_h;
+    QueueHandle_t queue_yellow_h;
+    QueueHandle_t queue_blue_h;
+} interface_t;
+
+typedef struct {
     ao_id_t recipient;
     union {
-        button_event_t button_event;
-        led_event_t led_event;
-    } event_data;
+        button_event_t button_event; // needed by UI event process handle       
+        interface_t target_h; // needed by UI event process handle
+        led_event_t led_event; // needed by LED event process handle
+    } event_data; // NOTE: must hold all the fields necessary for UI and LEDs
     void (*callback_free)(void*); // I want the callback memory free method to be related to the event data structure
 } ao_event_t;
 
 typedef struct {
-    void (*callback_process_event)(ao_event_t);
+    void (*callback_process_event)(ao_event_t*); // the callback event process will have the switch case to dispatch depending on the event message
     QueueHandle_t event_queue_h; // queue for event recv
 } ao_t;
-  
-extern memory_pool_t memory_pool;
 
+typedef struct {
+    ao_t *ui;
+    ao_t *red;
+    ao_t* blue;
+    ao_t* yellow;
+} ao_all_t;
+
+extern memory_pool_t memory_pool;
 void memory_pool_block_free(void *pblock);
+void handle_ui_event(ao_event_t* event);
+void handle_led_event(ao_event_t* event);
 #endif
 
 /********************** external functions declaration ***********************/

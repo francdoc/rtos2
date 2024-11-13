@@ -93,31 +93,32 @@ void handle_ui_event(button_event_t event) {
 #endif
 
 #ifdef SINGLE_TASK_MULTIPLE_AO
-void handle_ui_event(button_event_t event) {
+void handle_ui_event(ao_event_t* event){
     ao_event_t* msg = (ao_event_t*) memory_pool_block_get(&memory_pool);
+    LOGGER_INFO("UI event process handler: event_data.button_event=%d", event->event_data.button_event);
     if (msg != NULL) {
         msg->callback_free = memory_pool_block_free;  // Set callback to free memory
-
-        switch (event) {
+        switch (event->event_data.button_event) {
             case BUTTON_TYPE_PULSE:
                 msg->recipient = AO_ID_LED_RED;
                 msg->event_data.led_event = LED_RED_ON;
-                xQueueSend(led_red_queue, &msg, 0);
+                xQueueSend(event->event_data.target_h.queue_red_h, &msg, 0);
                 LOGGER_INFO("Sent LED_RED_ON to red queue");
                 break;
             case BUTTON_TYPE_SHORT:
                 msg->recipient = AO_ID_LED_YELLOW;
                 msg->event_data.led_event = LED_YELLOW_ON;
-                xQueueSend(led_yellow_queue, &msg, 0);
+                xQueueSend(event->event_data.target_h.queue_yellow_h, &msg, 0);
                 LOGGER_INFO("Sent LED_YELLOW_ON to yellow queue");
                 break;
             case BUTTON_TYPE_LONG:
                 msg->recipient = AO_ID_LED_BLUE;
                 msg->event_data.led_event = LED_BLUE_ON;
-                xQueueSend(led_blue_queue, &msg, 0);
+                xQueueSend(event->event_data.target_h.queue_blue_h, &msg, 0);
                 LOGGER_INFO("Sent LED_BLUE_ON to blue queue");
                 break;
             default:
+                LOGGER_INFO("UI task: cleaning msg.");
                 memory_pool_block_free(msg);  // Corrected call to match single-argument signature
                 return;
         }
