@@ -105,45 +105,31 @@ void handle_led_event(ao_id_t led_id, led_event_t event) {
 
 #ifdef SINGLE_TASK_MULTIPLE_AO
 void handle_led_event(ao_event_t* event) {
-    GPIO_TypeDef* port = NULL;
-    uint16_t pin = 0;
-
-    // Log the start of the handling process
-    LOGGER_INFO("Starting to handle LED event. Event type: %d", event->event_data.led_event);
-
-    // Determine the port and pin based on the LED event type
+    GPIO_TypeDef* port;
+    uint16_t pin;
+	LOGGER_INFO("Handling event.");
     switch (event->event_data.led_event) {
-        case LED_RED_ON:
+        case AO_ID_LED_RED:
             port = LED_RED_PORT;
             pin = LED_RED_PIN;
-            LOGGER_INFO("Event identified as LED_RED_ON, port: %p, pin: %u", (void*)port, pin);
             break;
-        case LED_YELLOW_ON:
+        case AO_ID_LED_YELLOW:
             port = LED_YELLOW_PORT;
             pin = LED_YELLOW_PIN;
-            LOGGER_INFO("Event identified as LED_YELLOW_ON, port: %p, pin: %u", (void*)port, pin);
             break;
-        case LED_BLUE_ON:
+        case AO_ID_LED_BLUE:
             port = LED_BLUE_PORT;
             pin = LED_BLUE_PIN;
-            LOGGER_INFO("Event identified as LED_BLUE_ON, port: %p, pin: %u", (void*)port, pin);
             break;
         default:
-        	LOGGER_INFO("Unknown LED event received: %d.", event->event_data.led_event);
             return;
     }
 
-    // Toggle LED on, delay, and then toggle off
-    if (port != NULL && pin != 0) {
-        LOGGER_INFO("Turning LED ON at port %p, pin %u", (void*)port, pin);
+    if (event->event_data.led_event == LED_RED_ON || event->event_data.led_event == LED_YELLOW_ON || event->event_data.led_event == LED_BLUE_ON) {
         HAL_GPIO_WritePin(port, pin, GPIO_PIN_SET);
-
-        vTaskDelay(pdMS_TO_TICKS(1000));  // Delay for LED to stay ON
-
-        LOGGER_INFO("Turning LED OFF at port %p, pin %u", (void*)port, pin);
+        vTaskDelay(pdMS_TO_TICKS(1000));
         HAL_GPIO_WritePin(port, pin, GPIO_PIN_RESET);
-    } else {
-    	LOGGER_INFO("Port or pin not set correctly for LED event: %d", event->event_data.led_event);
     }
 }
 #endif
+

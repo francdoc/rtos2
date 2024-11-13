@@ -116,20 +116,20 @@ void handle_led_event(ao_event_t* event) {
         case LED_RED_ON:
             port = LED_RED_PORT;
             pin = LED_RED_PIN;
-            LOGGER_INFO("Event identified as LED_RED_ON, port: %p, pin: %u", (void*)port, pin);
+            LOGGER_INFO("Event identified as LED_RED_ON. Assigned port: %p, pin: %u", (void*)port, pin);
             break;
         case LED_YELLOW_ON:
             port = LED_YELLOW_PORT;
             pin = LED_YELLOW_PIN;
-            LOGGER_INFO("Event identified as LED_YELLOW_ON, port: %p, pin: %u", (void*)port, pin);
+            LOGGER_INFO("Event identified as LED_YELLOW_ON. Assigned port: %p, pin: %u", (void*)port, pin);
             break;
         case LED_BLUE_ON:
             port = LED_BLUE_PORT;
             pin = LED_BLUE_PIN;
-            LOGGER_INFO("Event identified as LED_BLUE_ON, port: %p, pin: %u", (void*)port, pin);
+            LOGGER_INFO("Event identified as LED_BLUE_ON. Assigned port: %p, pin: %u", (void*)port, pin);
             break;
         default:
-        	LOGGER_INFO("Unknown LED event received: %d.", event->event_data.led_event);
+        	LOGGER_INFO("Unknown LED event received: %d. Exiting handler without action.", event->event_data.led_event);
             return;
     }
 

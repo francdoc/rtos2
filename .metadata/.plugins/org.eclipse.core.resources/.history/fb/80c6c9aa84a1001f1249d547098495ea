@@ -118,6 +118,7 @@ void task_dispatcher(void *argument) {
 		if (xQueueReceive(ao_red_led->event_queue_h, &event_ptr, 0) == pdPASS) {
 			LOGGER_INFO("LED Red Event received");
 			ao_red_led->callback_process_event(event_ptr);
+			LOGGER_INFO("LED Red Event processed");
 			event_ptr->callback_free(event_ptr);
 			LOGGER_INFO("Callback free ok.");
 		}
@@ -133,7 +134,6 @@ void task_dispatcher(void *argument) {
 			LOGGER_INFO("LED Blue Event received");
 			ao_blue_led->callback_process_event(event_ptr);
 			event_ptr->callback_free(event_ptr);
-			LOGGER_INFO("Callback free ok.");
 		}
 		vTaskDelay(pdMS_TO_TICKS(10)); // Adjust polling rate if necessary
 	}

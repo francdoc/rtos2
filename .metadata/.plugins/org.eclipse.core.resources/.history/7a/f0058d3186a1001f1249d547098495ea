@@ -94,11 +94,12 @@ void handle_ui_event(button_event_t event) {
 
 #ifdef SINGLE_TASK_MULTIPLE_AO
 void handle_ui_event(ao_event_t* event) {
-   // Log the incoming event and associated button event data
-	LOGGER_INFO("UI event process handler: event_data.button_event=%d", event->event_data.button_event);
-	LOGGER_INFO("Checking queue_red_h handle: %p (expected 0x20000a60)", (void*)event->event_data.target_h.queue_red_h);
-
     ao_event_t* msg = (ao_event_t*) memory_pool_block_get(&memory_pool);
+
+    // Log the incoming event and associated button event data
+    LOGGER_INFO("UI event process handler: event_data.button_event=%d", event->event_data.button_event);
+
+    LOGGER_INFO("Checking queue_red_h handle: %p (expected 0x20000a60)", (void*)event->event_data.target_h.queue_red_h);
 
     if (msg != NULL) {
         msg->callback_free = memory_pool_block_free;  // Set callback to free memory
@@ -107,9 +108,9 @@ void handle_ui_event(ao_event_t* event) {
         switch (event->event_data.button_event) {
             case BUTTON_TYPE_PULSE:
                 msg->event_data.led_event = LED_RED_ON;
-                LOGGER_INFO("Sent LED_RED_ON to red queue at handle before send: %p", (void*)event->event_data.target_h.queue_red_h);
+                LOGGER_INFO("Sent LED_RED_ON to red queue at handle: %p", (void*)event->event_data.target_h.queue_red_h);
                 xQueueSend(event->event_data.target_h.queue_red_h, &msg, 0);
-                LOGGER_INFO("Sent LED_RED_ON to red queue at handle after send: %p", (void*)event->event_data.target_h.queue_red_h);
+                LOGGER_INFO("Sent LED_RED_ON to red queue at handle: %p", (void*)event->event_data.target_h.queue_red_h);
                 break;
 
             case BUTTON_TYPE_SHORT:

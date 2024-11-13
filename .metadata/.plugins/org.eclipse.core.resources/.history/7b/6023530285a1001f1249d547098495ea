@@ -24,7 +24,7 @@ static uint8_t memblock[MEMORY_POOL_SIZE(10,sizeof(ao_event_t))];
 #include "memory_pool.h"
 QueueHandle_t dispatcher_queue;
 memory_pool_t memory_pool;
-static uint8_t memblock[MEMORY_POOL_SIZE(60,sizeof(ao_event_t))];
+static uint8_t memblock[MEMORY_POOL_SIZE(20,sizeof(ao_event_t))];
 #endif
 
 // NOTE: now I will not make the queue handles extern (global).
