@@ -183,6 +183,12 @@ void app_init(void)
    ao_all.yellow->event_queue_h = led_yellow_queue;
    ao_all.blue->event_queue_h = led_blue_queue;
 
+   LOGGER_INFO("Assigned queue handles for each active object:");
+   LOGGER_INFO("UI Queue Handle Address: %p", (void*)ao_all.ui->event_queue_h);
+   LOGGER_INFO("LED Red Queue Handle Address: %p", (void*)ao_all.red->event_queue_h);
+   LOGGER_INFO("LED Yellow Queue Handle Address: %p", (void*)ao_all.yellow->event_queue_h);
+   LOGGER_INFO("LED Blue Queue Handle Address: %p", (void*)ao_all.blue->event_queue_h);
+
    ao_all.ui->callback_process_event = handle_ui_event;
    ao_all.red->callback_process_event = handle_led_event;
    ao_all.yellow->callback_process_event = handle_led_event;

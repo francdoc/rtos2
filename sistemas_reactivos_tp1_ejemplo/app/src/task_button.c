@@ -102,11 +102,7 @@ void task_button(void* argument)
 
 #ifdef SINGLE_TASK_MULTIPLE_AO
 	ao_all_t* ao_all = (ao_all_t*) argument;
-
 	ao_t* ao_ui = (ao_t*) ao_all->ui;
-	ao_t* ao_red_led = (ao_t*) ao_all->red;
-	ao_t* ao_blue_led = (ao_t*) ao_all->blue;
-	ao_t* ao_yellow_led = (ao_t*) ao_all->yellow;
 
     while (true) {
 		GPIO_PinState button_state = HAL_GPIO_ReadPin(BUTTON_PORT, BUTTON_PIN);
@@ -129,14 +125,20 @@ void task_button(void* argument)
 
 				if (msg != NULL) {
 					msg->callback_free = memory_pool_block_free;
-					msg->event_data.target_h.queue_red_h = ao_red_led->event_queue_h;
-					msg->event_data.target_h.queue_yellow_h = ao_yellow_led->event_queue_h;
-					msg->event_data.target_h.queue_blue_h = ao_blue_led->event_queue_h;
+
+					 // Assign target queue handles before sending
+					msg->event_data.target_h.queue_red_h = ao_all->red->event_queue_h;
+					msg->event_data.target_h.queue_yellow_h = ao_all->yellow->event_queue_h;
+					msg->event_data.target_h.queue_blue_h = ao_all->blue->event_queue_h;
+
 					msg->event_data.button_event = event; // WARNING: we assign this at the end to avoid corruption
+
 					LOGGER_INFO("Button event duration: %lu ms", button_counter);
 					LOGGER_INFO("Button task: event_data.button_event before sending=%d", msg->event_data.button_event);
 					LOGGER_INFO("Button task: Address of msg (event_ptr) before sending=%p", (void*)msg);
+
 					xQueueSend(ao_ui->event_queue_h, &msg, 0);
+
 					LOGGER_INFO("Button task: event_data.button_event after sending=%d", msg->event_data.button_event);
 					LOGGER_INFO("Button task: Address of msg (event_ptr) after sending=%p", (void*)msg);
 				}

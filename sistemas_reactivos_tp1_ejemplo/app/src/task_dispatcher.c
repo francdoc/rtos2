@@ -117,14 +117,17 @@ void task_dispatcher(void *argument) {
 
 		if (xQueueReceive(ao_red_led->event_queue_h, &event_ptr, 0) == pdPASS) {
 			LOGGER_INFO("LED Red Event received");
-			ao_red_led->callback_process_event(event_ptr);			
+			ao_red_led->callback_process_event(event_ptr);
+			LOGGER_INFO("LED Red Event processed");
 			event_ptr->callback_free(event_ptr);
+			LOGGER_INFO("Callback free ok.");
 		}
 
 		if (xQueueReceive(ao_yellow_led->event_queue_h, &event_ptr, 0) == pdPASS) {
 			LOGGER_INFO("LED Yellow Event received");
 			ao_yellow_led->callback_process_event(event_ptr);
 			event_ptr->callback_free(event_ptr);
+			LOGGER_INFO("Callback free ok.");
 		}
 
 		if (xQueueReceive(ao_blue_led->event_queue_h, &event_ptr, 0) == pdPASS) {

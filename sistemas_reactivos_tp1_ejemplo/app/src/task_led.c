@@ -107,7 +107,7 @@ void handle_led_event(ao_id_t led_id, led_event_t event) {
 void handle_led_event(ao_event_t* event) {
     GPIO_TypeDef* port;
     uint16_t pin;
-
+	LOGGER_INFO("Handling event.");
     switch (event->event_data.led_event) {
         case AO_ID_LED_RED:
             port = LED_RED_PORT;
