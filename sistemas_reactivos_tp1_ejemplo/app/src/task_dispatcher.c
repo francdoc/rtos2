@@ -111,6 +111,10 @@ void task_dispatcher(void *argument) {
 			* This approach enables a unified event handling interface that supports both single-parameter and multi-parameter functions, 
 			* making it flexible enough to accommodate various event signatures.
 			*/
+            LOGGER_INFO("Dispatcher task: queue_red_h handle:%p", (void*)event_ptr->event_data.target_h.queue_red_h);
+            LOGGER_INFO("Dispatcher task: queue_yellow_h handle:%p", (void*)event_ptr->event_data.target_h.queue_yellow_h);
+            LOGGER_INFO("Dispatcher task: queue_blue_h handle:%p", (void*)event_ptr->event_data.target_h.queue_blue_h);
+
 			ao_ui->callback_process_event(event_ptr); // ui process event handle needs button event and LED queue handles.	
 			event_ptr->callback_free(event_ptr);
 		}

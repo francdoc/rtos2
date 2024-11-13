@@ -23,8 +23,6 @@ static uint8_t memblock[MEMORY_POOL_SIZE(10,sizeof(ao_event_t))];
 #ifdef SINGLE_TASK_MULTIPLE_AO
 #include "memory_pool.h"
 QueueHandle_t dispatcher_queue;
-memory_pool_t memory_pool;
-static uint8_t memblock[MEMORY_POOL_SIZE(60,sizeof(ao_event_t))];
 #endif
 
 // NOTE: now I will not make the queue handles extern (global).
@@ -52,10 +50,6 @@ void memory_pool_block_free(void *pblock) {
 #endif
 
 #ifdef SINGLE_TASK_MULTIPLE_AO
-void memory_pool_block_free(void *pblock) {
-    memory_pool_block_put(&memory_pool, pblock);
-}
-
 QueueHandle_t ui_queue;
 QueueHandle_t led_red_queue;
 QueueHandle_t led_yellow_queue;
@@ -139,8 +133,6 @@ void app_init(void)
 #endif
 
 #ifdef SINGLE_TASK_MULTIPLE_AO
-	memory_pool_init(&memory_pool, memblock, 10, sizeof(ao_event_t));
-
 	ui_queue = xQueueCreate(10, sizeof(ao_event_t*));
 	led_red_queue = xQueueCreate(10, sizeof(ao_event_t*));
 	led_yellow_queue = xQueueCreate(10, sizeof(ao_event_t*));
@@ -194,8 +186,8 @@ void app_init(void)
    ao_all.yellow->callback_process_event = handle_led_event;
    ao_all.blue->callback_process_event = handle_led_event;
    
-   xTaskCreate(task_button, "Button Task", 256, &ao_all, tskIDLE_PRIORITY, NULL);
-   xTaskCreate(task_dispatcher, "Dispatcher Task", 256, &ao_all, tskIDLE_PRIORITY, NULL);
+   xTaskCreate(task_button, "Button Task", 512, &ao_all, tskIDLE_PRIORITY, NULL);
+   xTaskCreate(task_dispatcher, "Dispatcher Task", 512, &ao_all, tskIDLE_PRIORITY, NULL);
 #endif
 
     LOGGER_INFO("App initialized");
