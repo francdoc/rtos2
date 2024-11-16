@@ -122,12 +122,14 @@ typedef struct {
 } interface_t;
 
 typedef struct {
+	button_event_t button_event; // needed by UI event process handle
+	interface_t target_h; // needed by UI event process handle
+	led_event_t led_event; // needed by LED event process handle
+} event_data_t; // NOTE: must hold all the fields necessary for UI and LEDs
+
+typedef struct {
     ao_id_t recipient;
-    union {
-        button_event_t button_event; // needed by UI event process handle       
-        interface_t target_h; // needed by UI event process handle
-        led_event_t led_event; // needed by LED event process handle
-    } event_data; // NOTE: must hold all the fields necessary for UI and LEDs
+    event_data_t event_data;
     void (*callback_free)(void*); // I want the callback memory free method to be related to the event data structure
 } ao_event_t;
 
