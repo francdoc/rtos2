@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="ui_recv_queue_h"/>
+		<item key="selection" value="LOGGER_INFO"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="LOGGER_ERROR"/>
+			<item value="app"/>
+			<item value="memory_pool"/>
+			<item value="error"/>
+			<item value="warn"/>
+			<item value="ao_blue_led"/>
+			<item value="&#x09;ao_t* ao_blue_led = (ao_t*) ao_all-&gt;blue;"/>
+			<item value="ao_ui"/>
 			<item value="ui_recv_queue_h"/>
 			<item value="yello"/>
 		</list>
 		<list key="replacehistory">
+			<item value="LOGGER_INFO"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

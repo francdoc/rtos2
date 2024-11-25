@@ -1,4 +1,4 @@
-//task_button.c
+// task_button.c
 
 #include <stdio.h>
 #include <stdint.h>
@@ -22,10 +22,12 @@
 
 void task_button(void* argument)
 {
-	button_task_params_t *params = (button_task_params_t*) argument;
     uint32_t button_counter = 0;
 
     LOGGER_INFO("Button task initialized");
+
+#ifdef MULTIPLE_TASK_MULTIPLE_AO
+	button_task_params_t *params = (button_task_params_t*) argument;
 
     while (true)
     {
@@ -46,11 +48,8 @@ void task_button(void* argument)
 
             if (BUTTON_TYPE_NONE != event)
             {
-                // Log button duration before sending the event
                 LOGGER_INFO("Button event duration: %lu ms", button_counter);
-                xQueueSend(params->ui_queue_h, &event, ( TickType_t ) 0);
-
-                // Log the sent event
+                xQueueSend(params->ui_queue_h, &event, (TickType_t) 0);
                 LOGGER_INFO("Sent event to UI queue: %d", event);
             }
 
@@ -58,7 +57,112 @@ void task_button(void* argument)
         }
         vTaskDelay(pdMS_TO_TICKS(BUTTON_PERIOD_MS_));
     }
+#endif
+
+#ifdef SINGLE_TASK_SINGLE_AO
+    while (true)
+    {
+    	GPIO_PinState button_state = HAL_GPIO_ReadPin(BUTTON_PORT, BUTTON_PIN);
+		if (button_state == GPIO_PIN_SET)
+		{
+			button_counter += BUTTON_PERIOD_MS_;
+		}
+		else
+		{
+			button_event_t event = BUTTON_TYPE_NONE;
+			if (button_counter >= LONG_BUTTON_LOWER_LIMIT_MS)
+				event = BUTTON_TYPE_LONG; // to led_blue_queue
+			else if (button_counter >= SHORT_BUTTON_UPPER_LIMIT_MS && button_counter <= LONG_BUTTON_LOWER_LIMIT_MS)
+				event = BUTTON_TYPE_SHORT;  // to led_yellow_queue
+			else if (button_counter >= PULSE_BUTTON_LOWER_LIMIT_MS && button_counter <= SHORT_BUTTON_UPPER_LIMIT_MS)
+				event = BUTTON_TYPE_PULSE; // to led_red_queue
+
+			if (BUTTON_TYPE_NONE != event)
+			{
+                LOGGER_INFO("Button event duration: %lu ms", button_counter);
+
+				ao_event_t *msg = (ao_event_t*) memory_pool_block_get(&memory_pool);
+				if (msg != NULL)
+				{
+                    // Log the contents of the message after assignment
+                    LOGGER_INFO("Message prepared: recipient=%d, event_data.button_event=%d, callback_free=%p",
+                                msg->recipient, msg->event_data.button_event, (void*)msg->callback_free);
+					msg->recipient = AO_ID_UI;
+					msg->event_data.button_event = event;
+					msg->callback_free = memory_pool_block_free;
+					xQueueSend(dispatcher_queue, &msg, 0);
+                    LOGGER_INFO("Message dispatched");
+				}
+	            button_counter = 0;
+			}
+		}
+		vTaskDelay(pdMS_TO_TICKS(BUTTON_PERIOD_MS_));
+    }
+#endif
+
+#ifdef SINGLE_TASK_MULTIPLE_AO
+	ao_all_t* ao_all = (ao_all_t*) argument;
+
+    while (true) {
+		GPIO_PinState button_state = HAL_GPIO_ReadPin(BUTTON_PORT, BUTTON_PIN);
+
+		if (button_state == GPIO_PIN_SET) {
+			button_counter += BUTTON_PERIOD_MS_;
+		} else {
+			button_event_t event = BUTTON_TYPE_NONE;
+
+			if (button_counter >= LONG_BUTTON_LOWER_LIMIT_MS) {
+				event = BUTTON_TYPE_LONG;
+			} else if (button_counter >= SHORT_BUTTON_UPPER_LIMIT_MS) {
+				event = BUTTON_TYPE_SHORT;
+			} else if (button_counter >= PULSE_BUTTON_LOWER_LIMIT_MS) {
+				event = BUTTON_TYPE_PULSE;
+			}
+
+			if (event != BUTTON_TYPE_NONE) {
+				// Allocate memory for the message using pvPortMalloc
+				ao_event_t* msg = (ao_event_t*) pvPortMalloc(sizeof(ao_event_t));
+
+				if (msg != NULL) {
+					// Set vPortFree as the callback function to free memory after processing
+					msg->callback_free = vPortFree;
+
+					// Assign target queue handles before sending
+					msg->event_data.target_h.queue_red_h = ao_all->red->event_queue_h;
+					msg->event_data.target_h.queue_yellow_h = ao_all->yellow->event_queue_h;
+					msg->event_data.target_h.queue_blue_h = ao_all->blue->event_queue_h;
+
+					LOGGER_INFO("Button task: queue_red_h=%p, queue_yellow_h=%p, queue_blue_h=%p",
+					            (void*)msg->event_data.target_h.queue_red_h,
+					            (void*)msg->event_data.target_h.queue_yellow_h,
+					            (void*)msg->event_data.target_h.queue_blue_h);
+					// Set the button event data
+					msg->event_data.button_event = event; // WARNING: assign this at the end to avoid corruption
+
+					LOGGER_INFO("Button event duration: %lu ms", button_counter);
+					LOGGER_INFO("Button task: event_data.button_event before sending=%d", msg->event_data.button_event);
+					LOGGER_INFO("Button task: Address of msg (event_ptr) before sending=%p", (void*)msg);
+
+					// Send the message to the UI event queue
+					xQueueSend(ao_all->ui->event_queue_h, &msg, 0);
+
+					LOGGER_INFO("-----------------------------------------------");
+					LOGGER_INFO("Task button:");
+					LOGGER_INFO("UI Queue Handle Address: %p", (void*)ao_all->ui->event_queue_h);
+					LOGGER_INFO("LED Red Queue Handle Address: %p", (void*)ao_all->red->event_queue_h);
+					LOGGER_INFO("LED Yellow Queue Handle Address: %p", (void*)ao_all->yellow->event_queue_h);
+					LOGGER_INFO("LED Blue Queue Handle Address: %p", (void*)ao_all->blue->event_queue_h);
+
+					LOGGER_INFO("Button task: event_data.button_event after sending=%d", msg->event_data.button_event);
+					LOGGER_INFO("Button task: Address of msg (event_ptr) after sending=%p", (void*)msg);
+					LOGGER_INFO("-----------------------------------------------");
+				} else {
+					LOGGER_INFO("Button task: Memory allocation failed for msg.");
+				}
+			}
+			button_counter = 0;
+		}
+		vTaskDelay(pdMS_TO_TICKS(BUTTON_PERIOD_MS_));
+	}
+#endif
 }
-
-/********************** end of file ******************************************/
-
