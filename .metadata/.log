@@ -399,3 +399,24 @@ org.eclipse.swt.SWTException: Device is disposed
 	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
 	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:226)
 	at java.base/java.lang.Thread.run(Thread.java:840)
+!SESSION 2024-11-25 17:16:09.863 -----------------------------------------------
+eclipse.buildId=Version 1.16.1
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=es_AR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-11-25 17:16:12.190
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-11-25 17:16:14.234
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-11-25 17:16:14.234
+!MESSAGE Log4j2 initialized with config file /home/franco/repos/rtos2/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-11-25 17:16:17.768
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-11-25 17:21:29.842
+!MESSAGE Indexed 'dynamic_priority_queue_practice' (39 sources, 177 headers) in 2.8 sec: 20,829 declarations; 92,049 references; 2 unresolved inclusions; 202 syntax errors; 239 unresolved names (0.21%)
