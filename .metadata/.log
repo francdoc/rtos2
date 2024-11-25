@@ -728,3 +728,6 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-11-25 17:33:52.691
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2024-11-25 19:27:29.750
+!MESSAGE Won't launch debug session since we failed to locate the binary.
