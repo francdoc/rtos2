@@ -1203,3 +1203,958 @@
 2024-11-25 17:23:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:23:17 PM java.util.prefs.FileSystemPreferences syncWorld
 2024-11-25 17:23:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
 2024-11-25 17:23:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:23:47,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:23:47 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:23:47,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:23:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:23:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:23:47 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:23:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:23:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:24:17,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:24:17 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:24:17,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:24:17,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:24:17,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:24:17 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:24:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:24:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:24:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:24:47 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:24:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:24:47,431 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:24:47,431 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:24:47 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:24:47,432 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:24:47,432 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:25:17,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:25:17 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:25:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:25:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:25:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:25:17 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:25:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:25:17,431 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:25:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:25:47 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:25:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:25:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:25:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:25:47 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:25:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:25:47,431 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:26:17,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:26:17 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:26:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:26:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:26:17,431 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:26:17 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:26:17,431 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:26:17,431 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:26:47,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:26:47 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:26:47,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:26:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:26:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:26:47 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:26:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:26:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:27:17,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:27:17 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:27:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:27:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:27:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:27:17 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:27:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:27:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:27:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:27:47 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:27:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:27:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:27:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:27:47 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:27:47,431 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:27:47,431 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:28:17,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:28:17 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:28:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:28:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:28:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:28:17 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:28:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:28:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:28:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:28:47 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:28:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:28:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:28:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:28:47 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:28:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:28:47,431 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:29:17,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:29:17 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:29:17,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:29:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:29:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:29:17 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:29:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:29:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:29:47,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:29:47 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:29:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:29:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:29:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:29:47 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:29:47,431 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:29:47,431 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:30:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:30:17 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:30:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:30:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:30:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:30:17 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:30:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:30:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:30:47,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:30:47 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:30:47,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:30:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:30:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:30:47 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:30:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:30:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:31:17,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:31:17 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:31:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:31:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:31:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:31:17 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:31:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:31:17,431 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:31:47,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:31:47 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:31:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:31:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:31:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:31:47 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:31:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:31:47,431 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:32:17,428 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:32:17 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:32:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:32:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:32:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:32:17 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:32:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:32:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:32:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:32:47 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:32:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:32:47,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:32:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:32:47 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:32:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:32:47,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:33:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:33:17 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:33:17,429 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:33:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:33:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:33:17 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:33:17,430 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:33:17,431 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:33:40,335 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:33:40,336 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:33:49,545 [INFO] Activator:176 - 
+
+
+2024-11-25 17:33:49,546 [INFO] Activator:177 - !SESSION log4j initialized
+2024-11-25 17:33:52,292 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-11-25 17:33:52,732 [INFO] ApplicationProperties:184 - Using Application install path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256
+2024-11-25 17:33:52,739 [INFO] DbMcusXml:78 - Set database path to: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//mcu/
+2024-11-25 17:33:52,739 [INFO] ApiDb:274 - Set plugin database path to: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//plugins/boardmanager/
+2024-11-25 17:33:52,739 [WARN] ApiDb:259 - Overriding images path with different value:  => /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//plugins/mcufinder/images/
+2024-11-25 17:33:52,741 [INFO] ApiDb:250 - Set database path to: /home/franco/.stmcufinder/plugins/mcufinder//mcu/
+2024-11-25 17:33:52,742 [INFO] DbMcusAds:125 - Set database path to: /home/franco/.stmcufinder/plugins/mcufinder//mcu/
+2024-11-25 17:33:52,742 [INFO] CrossReferenceDbSqlite:203 - Set database path to: /home/franco/.stmcufinder/plugins/mcufinder//mcu/cs/
+2024-11-25 17:33:52,794 [INFO] RulesReader:64 - Compatibility file has been processed (297 Rules)
+2024-11-25 17:33:52,823 [INFO] DbMcusXml:78 - Set database path to: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//mcu/
+2024-11-25 17:33:52,823 [INFO] ApiDb:274 - Set plugin database path to: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//plugins/boardmanager/
+2024-11-25 17:33:52,823 [INFO] ApiDb:261 - Set plugin images path to: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//plugins/mcufinder/images/
+2024-11-25 17:33:52,823 [WARN] DbFile:41 - Overriding database path with different value: /home/franco/.stmcufinder/plugins/mcufinder/ => /home/franco/.stmcufinder/plugins/mcufinder
+2024-11-25 17:33:52,823 [INFO] ApiDb:250 - Set database path to: /home/franco/.stmcufinder/plugins/mcufinder//mcu/
+2024-11-25 17:33:52,823 [WARN] DbFile:41 - Overriding database path with different value: /home/franco/.stmcufinder/plugins/mcufinder/ => /home/franco/.stmcufinder/plugins/mcufinder
+2024-11-25 17:33:52,823 [INFO] DbMcusAds:125 - Set database path to: /home/franco/.stmcufinder/plugins/mcufinder//mcu/
+2024-11-25 17:33:52,823 [WARN] DbFile:41 - Overriding database path with different value: /home/franco/.stmcufinder/plugins/mcufinder/ => /home/franco/.stmcufinder/plugins/mcufinder
+2024-11-25 17:33:52,823 [WARN] DbFile:41 - Overriding database path with different value: /home/franco/.stmcufinder/plugins/mcufinder/ => /home/franco/.stmcufinder/plugins/mcufinder
+2024-11-25 17:33:52,823 [INFO] CrossReferenceDbSqlite:203 - Set database path to: /home/franco/.stmcufinder/plugins/mcufinder//mcu/cs/
+2024-11-25 17:33:52,856 [INFO] MainPanel:268 - HeapMemory: 268435456
+2024-11-25 17:33:52,904 [INFO] DbMcusXml:78 - Set database path to: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//mcu/
+2024-11-25 17:33:52,904 [INFO] ApiDb:274 - Set plugin database path to: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//plugins/boardmanager/
+2024-11-25 17:33:52,904 [INFO] ApiDb:261 - Set plugin images path to: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256//db//plugins/mcufinder/images/
+2024-11-25 17:33:52,904 [WARN] DbFile:41 - Overriding database path with different value: /home/franco/.stmcufinder/plugins/mcufinder/ => /home/franco/.stmcufinder/plugins/mcufinder
+2024-11-25 17:33:52,905 [INFO] ApiDb:250 - Set database path to: /home/franco/.stmcufinder/plugins/mcufinder//mcu/
+2024-11-25 17:33:52,905 [WARN] DbFile:41 - Overriding database path with different value: /home/franco/.stmcufinder/plugins/mcufinder/ => /home/franco/.stmcufinder/plugins/mcufinder
+2024-11-25 17:33:52,905 [INFO] DbMcusAds:125 - Set database path to: /home/franco/.stmcufinder/plugins/mcufinder//mcu/
+2024-11-25 17:33:52,905 [WARN] DbFile:41 - Overriding database path with different value: /home/franco/.stmcufinder/plugins/mcufinder/ => /home/franco/.stmcufinder/plugins/mcufinder
+2024-11-25 17:33:52,905 [WARN] DbFile:41 - Overriding database path with different value: /home/franco/.stmcufinder/plugins/mcufinder/ => /home/franco/.stmcufinder/plugins/mcufinder
+2024-11-25 17:33:52,905 [INFO] CrossReferenceDbSqlite:203 - Set database path to: /home/franco/.stmcufinder/plugins/mcufinder//mcu/cs/
+2024-11-25 17:33:52,913 [INFO] ApplicationProperties:184 - Using Application install path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256
+2024-11-25 17:33:52,914 [INFO] PluginManage:196 - Search for loadable plugins [exclusion list=, ]
+2024-11-25 17:33:52,915 [INFO] PluginManage:310 - Check plugin analytics
+2024-11-25 17:33:52,999 [INFO] AnalyticsPlugin:253 - Accepted Software Licenses: 
+2024-11-25 17:33:52,999 [INFO] AnalyticsPlugin:255 - Accepted CMSIS Pack Licenses: 
+2024-11-25 17:33:52,999 [INFO] AnalyticsPlugin:257 - Accepted Firmware Licenses: 
+2024-11-25 17:33:53,001 [INFO] PluginManage:359 - Loaded plugin analytics (category:tool,tabindex:-1)
+2024-11-25 17:33:53,001 [INFO] PluginManage:310 - Check plugin cadmodel
+2024-11-25 17:33:53,003 [INFO] CADModel:105 - Init CAD model plugin
+2024-11-25 17:33:53,004 [INFO] PluginManage:359 - Loaded plugin cadmodel (category:power,tabindex:5)
+2024-11-25 17:33:53,004 [INFO] PluginManage:310 - Check plugin clock
+2024-11-25 17:33:53,008 [INFO] PluginManage:359 - Loaded plugin clock (category:base,tabindex:2)
+2024-11-25 17:33:53,008 [INFO] PluginManage:310 - Check plugin ddr
+2024-11-25 17:33:53,009 [INFO] PluginManage:359 - Loaded plugin ddr (category:tool,tabindex:6)
+2024-11-25 17:33:53,010 [INFO] PluginManage:310 - Check plugin filemanager
+2024-11-25 17:33:53,098 [INFO] PluginManage:359 - Loaded plugin filemanager (category:base,tabindex:10)
+2024-11-25 17:33:53,098 [INFO] PluginManage:310 - Check plugin ipmanager
+2024-11-25 17:33:53,101 [INFO] PluginManage:359 - Loaded plugin ipmanager (category:base,tabindex:5)
+2024-11-25 17:33:53,101 [INFO] PluginManage:310 - Check plugin lpbam
+2024-11-25 17:33:53,106 [INFO] PluginManage:359 - Loaded plugin lpbam (category:base,tabindex:0)
+2024-11-25 17:33:53,107 [INFO] PluginManage:310 - Check plugin memorymap
+2024-11-25 17:33:53,114 [INFO] PluginManage:359 - Loaded plugin memorymap (category:base,tabindex:4)
+2024-11-25 17:33:53,114 [INFO] PluginManage:310 - Check plugin pinoutandconfiguration
+2024-11-25 17:33:53,119 [INFO] PluginManage:359 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2024-11-25 17:33:53,119 [INFO] PluginManage:310 - Check plugin pinoutconfig
+2024-11-25 17:33:53,178 [WARN] SupportedApi:132 - Cannot load RTOS API schema: s4s-elt-must-match.1: The content of 'definitions' must match (annotation?, (simpleType | complexType)?, (unique | key | keyref)*)). A problem was found starting at: attribute.
+2024-11-25 17:33:53,252 [INFO] PluginManage:359 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2024-11-25 17:33:53,252 [INFO] PluginManage:310 - Check plugin power
+2024-11-25 17:33:53,257 [INFO] PluginManage:359 - Loaded plugin power (category:power,tabindex:4)
+2024-11-25 17:33:53,257 [INFO] PluginManage:310 - Check plugin projectmanager
+2024-11-25 17:33:53,271 [INFO] PluginManage:359 - Loaded plugin projectmanager (category:projectmanager,tabindex:4)
+2024-11-25 17:33:53,271 [INFO] PluginManage:310 - Check plugin rif
+2024-11-25 17:33:53,275 [INFO] PluginManage:359 - Loaded plugin rif (category:base,tabindex:3)
+2024-11-25 17:33:53,275 [INFO] PluginManage:310 - Check plugin thirdparty
+2024-11-25 17:33:53,370 [INFO] PluginManage:359 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2024-11-25 17:33:53,370 [WARN] IntegrityCheckThread:84 - waiting for thirdparty lock release [integrity check]
+2024-11-25 17:33:53,370 [INFO] PluginManage:310 - Check plugin tools
+2024-11-25 17:33:53,370 [INFO] IntegrityCheckThread:86 - entering critical section [integrity check]
+2024-11-25 17:33:53,371 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [1/15]
+2024-11-25 17:33:53,372 [INFO] PluginManage:359 - Loaded plugin tools (category:base,tabindex:7)
+2024-11-25 17:33:53,372 [INFO] PluginManage:310 - Check plugin tutovideos
+2024-11-25 17:33:53,468 [INFO] PluginManage:359 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2024-11-25 17:33:53,468 [INFO] PluginManage:310 - Check plugin updater
+2024-11-25 17:33:53,477 [INFO] PluginManage:359 - Loaded plugin updater (category:base,tabindex:12)
+2024-11-25 17:33:53,477 [INFO] PluginManage:310 - Check plugin userauth
+2024-11-25 17:33:53,480 [INFO] UserAuth:113 - Init User Auth plugin
+2024-11-25 17:33:53,480 [INFO] PluginManage:359 - Loaded plugin userauth (category:base,tabindex:14)
+2024-11-25 17:33:53,480 [INFO] PluginManage:283 - PluginManage : Loaded plugins [18]
+2024-11-25 17:33:53,560 [INFO] PinOutPanel:1561 - setPackage(No Configuration,No Configuration)
+2024-11-25 17:33:53,592 [INFO] CADModel:165 - CPN selected for project level
+2024-11-25 17:33:53,592 [INFO] CADModel:114 - Register for checkConnection events
+2024-11-25 17:33:53,597 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,597 [INFO] PluginManager:220 - loadIPPluginJar : add lorawan
+2024-11-25 17:33:53,598 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,598 [INFO] PluginManager:220 - loadIPPluginJar : add openamp
+2024-11-25 17:33:53,601 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,602 [INFO] PluginManager:220 - loadIPPluginJar : add plateformsettings
+2024-11-25 17:33:53,603 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,603 [INFO] PluginManager:220 - loadIPPluginJar : add fatfs
+2024-11-25 17:33:53,605 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,605 [INFO] PluginManager:220 - loadIPPluginJar : add opamp
+2024-11-25 17:33:53,606 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,606 [INFO] PluginManager:220 - loadIPPluginJar : add sai
+2024-11-25 17:33:53,607 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,607 [INFO] PluginManager:220 - loadIPPluginJar : add gtzc
+2024-11-25 17:33:53,608 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,608 [INFO] PluginManager:220 - loadIPPluginJar : add comp
+2024-11-25 17:33:53,609 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,609 [INFO] PluginManager:220 - loadIPPluginJar : add i3c
+2024-11-25 17:33:53,610 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,610 [INFO] PluginManager:220 - loadIPPluginJar : add spi
+2024-11-25 17:33:53,611 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,611 [INFO] PluginManager:220 - loadIPPluginJar : add ts
+2024-11-25 17:33:53,613 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,614 [INFO] PluginManager:220 - loadIPPluginJar : add freertos
+2024-11-25 17:33:53,614 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,614 [INFO] PluginManager:220 - loadIPPluginJar : add genericplugin
+2024-11-25 17:33:53,616 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,616 [INFO] PluginManager:220 - loadIPPluginJar : add resmgrutility
+2024-11-25 17:33:53,617 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,617 [INFO] PluginManager:220 - loadIPPluginJar : add pdm2pcm
+2024-11-25 17:33:53,617 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,617 [INFO] PluginManager:220 - loadIPPluginJar : add tim
+2024-11-25 17:33:53,620 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,620 [INFO] PluginManager:220 - loadIPPluginJar : add mdma
+2024-11-25 17:33:53,621 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,621 [INFO] PluginManager:220 - loadIPPluginJar : add i2c
+2024-11-25 17:33:53,622 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,622 [INFO] PluginManager:220 - loadIPPluginJar : add can
+2024-11-25 17:33:53,622 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,622 [INFO] PluginManager:220 - loadIPPluginJar : add quadspi
+2024-11-25 17:33:53,623 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,623 [INFO] PluginManager:220 - loadIPPluginJar : add ucpd
+2024-11-25 17:33:53,624 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,624 [INFO] PluginManager:220 - loadIPPluginJar : add cryp
+2024-11-25 17:33:53,625 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,625 [INFO] PluginManager:220 - loadIPPluginJar : add extmemmanager
+2024-11-25 17:33:53,626 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,626 [INFO] PluginManager:220 - loadIPPluginJar : add hash
+2024-11-25 17:33:53,627 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,627 [INFO] PluginManager:220 - loadIPPluginJar : add tracer_emb
+2024-11-25 17:33:53,627 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,627 [INFO] PluginManager:220 - loadIPPluginJar : add gfxmmu
+2024-11-25 17:33:53,629 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,629 [INFO] PluginManager:220 - loadIPPluginJar : add fmc
+2024-11-25 17:33:53,630 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,630 [INFO] PluginManager:220 - loadIPPluginJar : add dma3
+2024-11-25 17:33:53,630 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,630 [INFO] PluginManager:220 - loadIPPluginJar : add usart
+2024-11-25 17:33:53,631 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,631 [INFO] PluginManager:220 - loadIPPluginJar : add aes
+2024-11-25 17:33:53,634 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,634 [INFO] PluginManager:220 - loadIPPluginJar : add linkedlist
+2024-11-25 17:33:53,635 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,635 [INFO] PluginManager:220 - loadIPPluginJar : add radio
+2024-11-25 17:33:53,636 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,636 [INFO] PluginManager:220 - loadIPPluginJar : add touchsensing
+2024-11-25 17:33:53,638 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,638 [INFO] PluginManager:220 - loadIPPluginJar : add gpio
+2024-11-25 17:33:53,638 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,639 [INFO] PluginManager:220 - loadIPPluginJar : add i2s
+2024-11-25 17:33:53,640 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,640 [INFO] PluginManager:220 - loadIPPluginJar : add nvic
+2024-11-25 17:33:53,641 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,641 [INFO] PluginManager:220 - loadIPPluginJar : add ipddr
+2024-11-25 17:33:53,643 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,643 [INFO] PluginManager:220 - loadIPPluginJar : add adc
+2024-11-25 17:33:53,645 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,645 [INFO] PluginManager:220 - loadIPPluginJar : add stm32_wpan
+2024-11-25 17:33:53,646 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,646 [INFO] PluginManager:220 - loadIPPluginJar : add dfsdm
+2024-11-25 17:33:53,647 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,647 [INFO] PluginManager:220 - loadIPPluginJar : add ddr_ctrl_phy
+2024-11-25 17:33:53,649 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,649 [INFO] PluginManager:220 - loadIPPluginJar : add gic
+2024-11-25 17:33:53,651 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,651 [INFO] PluginManager:220 - loadIPPluginJar : add dma
+2024-11-25 17:33:53,652 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,652 [INFO] PluginManager:220 - loadIPPluginJar : add usbx
+2024-11-25 17:33:53,652 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,652 [INFO] PluginManager:220 - loadIPPluginJar : add tsc
+2024-11-25 17:33:53,653 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-25 17:33:53,653 [INFO] PluginManager:220 - loadIPPluginJar : add ltdc
+2024-11-25 17:33:53,736 [INFO] CADModel:165 - CPN selected for project level
+2024-11-25 17:33:53,736 [INFO] CADModel:114 - Register for checkConnection events
+2024-11-25 17:33:53,737 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-25 17:33:53,737 [ERROR] CADModel:125 - Updater not yet initialized, retry later 
+2024-11-25 17:33:53,796 [INFO] CADModel:165 - CPN selected for project level
+2024-11-25 17:33:53,796 [INFO] CADModel:114 - Register for checkConnection events
+2024-11-25 17:33:53,796 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-25 17:33:53,796 [ERROR] CADModel:125 - Updater not yet initialized, retry later 
+2024-11-25 17:33:53,799 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-25 17:33:53,842 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-25 17:33:53,845 [INFO] DbMcusAds:53 - JSON generation date=Thu Sep 30 03:55:09 ART 2021 (1632984909247)
+2024-11-25 17:33:53,845 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-25 17:33:53,866 [WARN] DetailPanel:346 - Failed to get advertising image, set to default
+2024-11-25 17:33:53,927 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-25 17:33:53,928 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-25 17:33:53,928 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-25 17:33:53,928 [WARN] DetailPanel:346 - Failed to get advertising image, set to default
+2024-11-25 17:33:53,929 [FATAL] Updater:334 - Updater called before beeing initialized
+2024-11-25 17:33:53,944 [ERROR] Updater:1164 - MainUpdater not yet initialized. External WinMGr cannot be set.
+2024-11-25 17:33:53,945 [INFO] Updater:1100 - Updater Version found : 6.12.1
+2024-11-25 17:33:53,952 [INFO] ApplicationProperties:184 - Using Application install path: /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256
+2024-11-25 17:33:53,959 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:33:53 PM java.util.prefs.FileSystemPreferences$2 run
+2024-11-25 17:33:53,959 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not create system preferences directory. System preferences are unusable.
+2024-11-25 17:33:53,959 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:33:54,196 [INFO] MainUpdater:2873 - connection check result : 10
+2024-11-25 17:33:54,197 [INFO] MainUpdater:290 - Updater Check For Update Now.
+2024-11-25 17:33:54,197 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.121
+2024-11-25 17:33:54,199 [INFO] McuFinderGlobals:63 - Set McuFinder mode to 2 (CubeIDE integrated)
+2024-11-25 17:33:54,199 [INFO] UserAuth:179 - activating auth plugin
+2024-11-25 17:33:54,201 [INFO] UserAuth:417 - Internet connection configuration mode: 1
+2024-11-25 17:33:54,205 [INFO] JxBrowserEngine:152 - Initiate JxBrowser Engine with user profile folder
+2024-11-25 17:33:54,337 [INFO] CheckServerUpdateThread:120 - End of CheckServer Thread
+2024-11-25 17:33:54,446 [INFO] WebApp:167 - Instantiating new browser for Auth
+2024-11-25 17:33:54,805 [INFO] WebApp:448 - Apply proxy settings
+2024-11-25 17:33:54,805 [INFO] WebApp:533 - Chromium requires no authentication
+2024-11-25 17:33:54,810 [INFO] WebApp:476 - Direct internet connection detected
+2024-11-25 17:33:54,820 [INFO] WebApp:869 - Register for checkConnection events
+2024-11-25 17:33:54,820 [INFO] WebApp:448 - Apply proxy settings
+2024-11-25 17:33:54,820 [INFO] WebApp:533 - Chromium requires no authentication
+2024-11-25 17:33:54,820 [INFO] WebApp:476 - Direct internet connection detected
+2024-11-25 17:33:54,898 [INFO] WebApp:220 - Starting web application
+2024-11-25 17:33:54,898 [INFO] WebApp:578 - Web application path used /opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.common.mx_6.12.1.202409122256/db/plugins/mcufinder/reactClient1/index.html
+2024-11-25 17:33:55,005 [INFO] WebApp:186 - Connection restablished
+2024-11-25 17:33:56,425 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-MOTENVWB1.1.4.0
+2024-11-25 17:33:56,429 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-ATR-ASTRA1.2.0.1
+2024-11-25 17:33:56,432 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SMBUS.2.1.0
+2024-11-25 17:33:56,436 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-WB05N.1.1.0
+2024-11-25 17:33:56,452 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F7.1.1.0
+2024-11-25 17:33:56,489 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.11.0.0
+2024-11-25 17:33:56,597 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-FLIGHT1.5.0.2
+2024-11-25 17:33:56,603 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-DISPLAY.3.0.0
+2024-11-25 17:33:56,607 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE1.7.0.0
+2024-11-25 17:33:56,610 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC10.1.0.0
+2024-11-25 17:33:56,613 [WARN] PackLoader:240 - Cannot read IP mode file for emotas.I-CUBE-CANOPEN.1.3.0
+2024-11-25 17:33:56,618 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.3.1.0
+2024-11-25 17:33:56,621 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-SMARTAG2.1.2.0
+2024-11-25 17:33:56,625 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-11-25 17:33:56,625 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-11-25 17:33:56,625 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-11-25 17:33:56,626 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-11-25 17:33:56,626 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2024-11-25 17:33:56,627 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WL.2.0.0
+2024-11-25 17:33:56,630 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-MOTENV1.5.0.0
+2024-11-25 17:33:56,634 [WARN] PackLoader:240 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfMQTT.1.19.0
+2024-11-25 17:33:56,638 [WARN] PackLoader:240 - Cannot read IP mode file for WES.I-CUBE-Cesium.1.3.0
+2024-11-25 17:33:56,640 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE2.3.3.0
+2024-11-25 17:33:56,642 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC9.1.0.0
+2024-11-25 17:33:56,646 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TCPP.4.1.0
+2024-11-25 17:33:56,656 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G0.1.1.0
+2024-11-25 17:33:56,663 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SAFEA1.1.2.2
+2024-11-25 17:33:56,667 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC4.3.0.0
+2024-11-25 17:33:56,674 [WARN] PackLoader:240 - Cannot read IP mode file for EmbeddedOffice.I-CUBE-FS-RTOS.1.0.1
+2024-11-25 17:33:56,674 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,674 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,674 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,675 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,676 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,676 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,676 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,676 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,676 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,676 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,676 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,676 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,676 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,676 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,676 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,676 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,676 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,676 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,676 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,676 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,677 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,677 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,677 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,677 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,677 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,677 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,677 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,677 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,677 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,677 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,677 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,677 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,677 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,677 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,677 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,677 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,678 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,678 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,678 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,678 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,678 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,678 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,678 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,678 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,678 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,678 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,678 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,678 [ERROR] ConditionMgr:805 - Attr not supported : Dmpu
+2024-11-25 17:33:56,681 [WARN] PackLoader:240 - Cannot read IP mode file for RealThread.X-CUBE-RT-Thread_Nano.4.1.1
+2024-11-25 17:33:56,684 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-ATR-SIGFOX1.3.2.0
+2024-11-25 17:33:56,686 [WARN] PackLoader:240 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfSSL.5.7.2
+2024-11-25 17:33:56,689 [WARN] ConditionMgr:438 - getConditionDescription Invalid condition id : Cortex-A Device cause : null
+2024-11-25 17:33:56,698 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : Cortex-A Device cause : null
+2024-11-25 17:33:56,699 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : Cortex-A Device cause : null
+2024-11-25 17:33:56,699 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : Cortex-A Device cause : null
+2024-11-25 17:33:56,702 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-EEPRMA1.5.1.0
+2024-11-25 17:33:56,706 [WARN] PackLoader:240 - Cannot read IP mode file for ITTIA_DB.I-CUBE-ITTIADB.8.9.0
+2024-11-25 17:33:56,724 [WARN] PackLoader:240 - Cannot read IP mode file for SEGGER.I-CUBE-embOS.1.3.1
+2024-11-25 17:33:56,752 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALGOBUILD.1.4.0
+2024-11-25 17:33:56,754 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.9.1.0
+2024-11-25 17:33:56,761 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F4.1.1.0
+2024-11-25 17:33:56,765 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ISPU.2.1.0
+2024-11-25 17:33:56,767 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-FREERTOS.1.2.0
+2024-11-25 17:33:56,777 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L5.2.0.0
+2024-11-25 17:33:56,782 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC6.3.1.0
+2024-11-25 17:33:56,786 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-DPower.1.2.0
+2024-11-25 17:33:56,789 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC7.1.0.1
+2024-11-25 17:33:56,805 [WARN] ConditionMgr:438 - getConditionDescription Invalid condition id : LAN8742 Phy interface Condition cause : null
+2024-11-25 17:33:56,805 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L4.2.0.0
+2024-11-25 17:33:56,807 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2024-11-25 17:33:56,807 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2024-11-25 17:33:56,808 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2024-11-25 17:33:56,814 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0
+2024-11-25 17:33:56,835 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7.3.3.0
+2024-11-25 17:33:56,852 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-IPS.3.0.0
+2024-11-25 17:33:56,867 [WARN] ConditionMgr:438 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-11-25 17:33:56,867 [WARN] ConditionMgr:438 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-11-25 17:33:56,869 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WB.2.0.0
+2024-11-25 17:33:56,870 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-11-25 17:33:56,870 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-11-25 17:33:56,871 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-11-25 17:33:56,871 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-11-25 17:33:56,871 [WARN] ConditionMgr:1039 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2024-11-25 17:33:56,876 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-GNSS1.7.0.0
+2024-11-25 17:33:56,881 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-STBOX1.2.0.0
+2024-11-25 17:33:56,891 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SUBG2.5.0.0
+2024-11-25 17:33:56,898 [WARN] PackLoader:240 - Cannot read IP mode file for Cesanta.I-CUBE-Mongoose.7.13.0
+2024-11-25 17:33:56,910 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0
+2024-11-25 17:33:56,915 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALS.1.0.2
+2024-11-25 17:33:56,919 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.24.1
+2024-11-25 17:33:56,921 [WARN] PackLoader:240 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfTPM.3.4.0
+2024-11-25 17:33:56,924 [WARN] PackLoader:240 - Cannot read IP mode file for portGmbH.I-Cube-SoM-uGOAL.1.1.0
+2024-11-25 17:33:56,939 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7RS.1.0.0
+2024-11-25 17:33:56,944 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-ATR-ASTRA1.2.0.0
+2024-11-25 17:33:56,953 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.3.4.2
+2024-11-25 17:33:56,979 [WARN] PackLoader:240 - Cannot read IP mode file for Infineon.AIROC-Wi-Fi-Bluetooth-STM32.1.6.1
+2024-11-25 17:33:56,984 [WARN] PackLoader:240 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfSSH.1.4.17
+2024-11-25 17:33:56,985 [INFO] ThirdParty:978 - Integrity check success = true
+2024-11-25 17:33:56,985 [INFO] IntegrityCheckThread:100 - exiting critical section [integrity check]
+2024-11-25 17:33:56,985 [INFO] IntegrityCheckThread:103 - End integrity checks thread
+2024-11-25 17:34:22,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:34:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:34:22,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:34:22,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:34:22,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:34:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:34:22,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:34:22,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:34:52,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:34:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:34:52,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:34:52,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:34:52,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:34:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:34:52,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:34:52,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:35:22,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:35:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:35:22,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:35:22,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:35:22,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:35:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:35:22,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:35:22,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:35:52,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:35:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:35:52,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:35:52,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:35:52,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:35:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:35:52,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:35:52,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:36:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:36:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:36:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:36:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:36:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:36:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:36:22,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:36:22,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:36:52,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:36:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:36:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:36:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:36:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:36:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:36:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:36:52,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:37:22,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:37:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:37:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:37:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:37:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:37:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:37:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:37:22,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:37:52,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:37:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:37:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:37:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:37:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:37:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:37:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:37:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:38:22,564 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:38:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:38:22,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:38:22,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:38:22,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:38:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:38:22,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:38:22,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:38:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:38:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:38:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:38:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:38:52,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:38:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:38:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:38:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:39:22,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:39:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:39:22,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:39:22,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:39:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:39:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:39:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:39:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:39:52,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:39:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:39:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:39:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:39:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:39:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:39:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:39:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:40:22,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:40:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:40:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:40:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:40:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:40:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:40:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:40:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:40:52,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:40:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:40:52,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:40:52,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:40:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:40:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:40:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:40:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:41:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:41:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:41:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:41:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:41:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:41:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:41:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:41:22,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:41:52,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:41:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:41:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:41:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:41:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:41:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:41:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:41:52,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:42:22,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:42:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:42:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:42:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:42:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:42:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:42:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:42:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:42:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:42:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:42:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:42:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:42:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:42:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:42:52,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:42:52,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:43:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:43:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:43:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:43:22,606 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:43:22,607 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:43:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:43:22,607 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:43:22,607 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:43:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:43:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:43:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:43:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:43:52,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:43:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:43:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:43:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:44:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:44:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:44:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:44:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:44:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:44:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:44:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:44:22,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:44:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:44:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:44:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:44:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:44:52,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:44:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:44:52,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:44:52,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:45:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:45:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:45:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:45:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:45:22,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:45:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:45:22,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:45:22,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:45:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:45:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:45:52,566 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:45:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:45:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:45:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:45:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:45:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:46:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:46:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:46:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:46:22,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:46:22,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:46:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:46:22,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:46:22,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:46:52,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:46:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:46:52,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:46:52,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:46:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:46:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:46:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:46:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:47:22,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:47:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:47:22,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:47:22,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:47:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:47:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:47:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:47:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:47:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:47:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:47:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:47:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:47:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:47:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:47:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:47:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:48:22,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:48:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:48:22,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:48:22,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:48:22,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:48:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:48:22,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:48:22,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:48:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:48:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:48:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:48:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:48:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:48:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:48:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:48:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:49:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:49:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:49:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:49:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:49:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:49:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:49:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:49:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:49:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:49:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:49:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:49:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:49:52,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:49:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:49:52,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:49:52,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:50:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:50:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:50:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:50:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:50:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:50:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:50:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:50:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:50:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:50:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:50:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:50:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:50:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:50:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:50:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:50:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:51:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:51:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:51:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:51:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:51:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:51:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:51:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:51:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:51:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:51:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:51:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:51:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:51:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:51:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:51:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:51:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:52:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:52:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:52:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:52:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:52:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:52:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:52:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:52:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:52:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:52:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:52:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:52:52,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:52:52,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:52:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:52:52,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:52:52,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:53:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:53:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:53:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:53:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:53:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:53:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:53:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:53:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:53:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:53:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:53:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:53:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:53:52,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:53:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:53:52,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:53:52,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:54:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:54:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:54:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:54:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:54:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:54:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:54:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:54:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:54:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:54:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:54:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:54:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:54:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:54:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:54:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:54:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:55:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:55:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:55:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:55:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:55:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:55:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:55:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:55:22,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:55:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:55:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:55:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:55:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:55:52,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:55:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:55:52,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:55:52,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:56:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:56:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:56:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:56:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:56:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:56:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:56:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:56:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:56:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:56:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:56:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:56:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:56:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:56:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:56:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:56:52,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:57:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:57:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:57:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:57:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:57:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:57:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:57:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:57:22,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:57:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:57:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:57:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:57:52,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:57:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:57:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:57:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:57:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:58:22,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:58:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:58:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:58:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:58:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:58:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:58:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:58:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:58:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:58:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:58:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:58:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:58:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:58:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:58:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:58:52,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:59:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:59:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:59:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:59:22,571 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:59:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:59:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:59:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:59:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:59:52,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:59:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 17:59:52,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 17:59:52,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 17:59:52,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 5:59:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 17:59:52,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 17:59:52,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:00:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:00:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:00:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:00:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:00:22,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:00:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:00:22,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:00:22,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:00:52,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:00:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:00:52,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:00:52,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:00:52,574 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:00:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:00:52,574 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:00:52,574 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:01:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:01:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:01:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:01:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:01:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:01:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:01:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:01:22,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:01:52,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:01:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:01:52,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:01:52,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:01:52,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:01:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:01:52,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:01:52,573 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:02:22,574 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:02:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:02:22,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:02:22,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:02:22,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:02:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:02:22,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:02:22,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:02:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:02:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:02:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:02:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:02:52,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:02:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:02:52,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:02:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:03:22,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:03:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:03:22,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:03:22,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:03:22,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:03:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:03:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:03:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:03:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:03:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:03:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:03:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:03:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:03:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:03:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:03:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:04:22,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:04:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:04:22,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:04:22,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:04:22,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:04:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:04:22,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:04:22,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:04:52,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:04:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:04:52,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:04:52,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:04:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:04:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:04:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:04:52,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:05:22,574 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:05:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:05:22,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:05:22,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:05:22,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:05:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:05:22,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:05:22,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:05:52,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:05:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:05:52,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:05:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:05:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:05:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:05:52,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:05:52,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:06:22,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:06:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:06:22,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:06:22,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:06:22,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:06:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:06:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:06:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:06:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:06:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:06:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:06:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:06:52,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:06:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:06:52,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:06:52,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:07:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:07:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:07:22,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:07:22,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:07:22,579 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:07:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:07:22,579 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:07:22,579 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:07:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:07:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:07:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:07:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:07:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:07:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:07:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:07:52,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:08:22,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:08:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:08:22,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:08:22,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:08:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:08:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:08:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:08:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:08:52,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:08:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:08:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:08:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:08:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:08:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:08:52,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:08:52,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:09:22,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:09:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:09:22,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:09:22,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:09:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:09:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:09:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:09:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:09:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:09:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:09:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:09:52,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:09:52,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:09:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:09:52,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:09:52,579 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:10:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:10:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:10:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:10:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:10:22,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:10:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:10:22,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:10:22,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:10:52,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:10:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:10:52,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:10:52,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:10:52,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:10:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:10:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:10:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:11:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:11:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:11:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:11:22,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:11:22,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:11:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:11:22,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:11:22,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:11:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:11:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:11:52,616 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:11:52,616 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:11:52,617 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:11:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:11:52,617 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:11:52,617 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:12:22,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:12:22 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:12:22,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:12:22,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:12:22,579 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:12:22 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:12:22,579 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:12:22,579 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:12:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:12:52 PM java.util.prefs.FileSystemPreferences checkLockFile0ErrorCode
+2024-11-25 18:12:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Could not lock System prefs. Unix error code 2.
+2024-11-25 18:12:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-25 18:12:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 25, 2024 6:12:52 PM java.util.prefs.FileSystemPreferences syncWorld
+2024-11-25 18:12:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Couldn't flush system prefs: java.util.prefs.BackingStoreException: Couldn't get file lock.
+2024-11-25 18:12:52,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
