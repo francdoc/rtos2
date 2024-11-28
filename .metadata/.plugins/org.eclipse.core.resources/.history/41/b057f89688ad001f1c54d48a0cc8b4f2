@@ -1,0 +1,22 @@
+/*
+ * ao.h
+ *
+ *  Created on: Nov 25, 2024
+ *      Author: franco
+ */
+
+#ifndef INC_AO_H_
+#define INC_AO_H_
+
+typedef struct {
+	 void (*callback_process)(void*);
+	 QueueHandle_t event_queue_h;
+ } ao_t;
+
+typedef struct {
+	data_t data;
+	void (*callback_free)(void*);
+	ao_t ao;
+} ao_msg_t;
+
+#endif /* INC_AO_H_ */

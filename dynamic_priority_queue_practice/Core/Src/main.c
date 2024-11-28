@@ -29,6 +29,7 @@
 #include "dwt.h"
 
 /* Application includes. */
+#include "app.h"
 
 /* USER CODE END Includes */
 
@@ -121,10 +122,10 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   /* Start timer */
-	HAL_TIM_Base_Start_IT(&htim2);
+  HAL_TIM_Base_Start_IT(&htim2);
 	
-    /* add application, ... */
-	// app_init();
+  /* add application, ... */
+  app_init();
 
   /* USER CODE END 2 */
 

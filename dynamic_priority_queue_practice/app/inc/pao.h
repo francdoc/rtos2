@@ -1,19 +1,9 @@
-/*
- * pao.h
- *
- *  Created on: Nov 25, 2024
- *      Author: franco
- */
-
 #ifndef INC_PAO_H_
 #define INC_PAO_H_
 
 #define MAX_SIZE 10
 
-typedef struct {
-	button_event_t button_event;
-	led_event_t led_event;
-} event_data_t;
+typedef void* pao_event_t;
 
 typedef enum {
 	LOW,
@@ -23,7 +13,7 @@ typedef enum {
 
 typedef struct {
 	priority_t priority;
-	event_data_t data_t;
+	pao_event_t data_t;
 } queue_data_t;
 
 typedef struct {
@@ -33,8 +23,14 @@ typedef struct {
 } PrioQueueHandle_t;
 
 typedef struct {
-	void (*callback_process_event)(queue_data_t*);
-	PrioQueueHandle_t event_queue_h;
+	void (*pao_process_event_t)(pao_event_t*);
+	PrioQueueHandle_t pevent_queue_h;
 } pao_t;
+
+typedef struct {
+	pao_event_t pevent;
+	void (*pao_msg_callback_t)(void*);
+	pao_t pao;
+} pao_msg_t;
 
 #endif /* INC_PAO_H_ */

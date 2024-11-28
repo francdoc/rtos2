@@ -1,0 +1,23 @@
+#ifndef INC_AO_H_
+#define INC_AO_H_
+
+typedef struct {
+	ao_t ao_ui;
+	ao_t ao_leds;
+} ao_system_t;
+
+typedef struct {
+} data_t;
+
+typedef struct {
+	 void (*callback_process_event)(void*);
+	 QueueHandle_t event_queue_h;
+ } ao_t;
+
+typedef struct {
+	data_t data;
+	void (*callback_free_memory)(void*);
+	ao_t ao;
+} ao_msg_t;
+
+#endif /* INC_AO_H_ */

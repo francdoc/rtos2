@@ -1,0 +1,15 @@
+#include "main.h"
+#include "cmsis_os.h"
+#include "logger.h"
+#include "dwt.h"
+#include "board.h"
+
+#include "app.h"
+
+void app_init(void)
+{
+	LOGGER_INFO("app init");
+	cycle_counter_init();
+}
+
+/********************** end of file ******************************************/

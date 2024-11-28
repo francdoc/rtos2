@@ -1,21 +1,17 @@
-/*
- * ao.h
- *
- *  Created on: Nov 25, 2024
- *      Author: franco
- */
-
 #ifndef INC_AO_H_
 #define INC_AO_H_
 
-/*
- * Estructura de objeto activo:
- * 1) callback para ejecutar al recibir un mensaje (se configura al inicio)
- * 2) queue para recibir mensajes (se configura al inicio y se crea una tarea con ese handle de queue)
- *
- * Estructura de mensaje que entra en la queue de RTOS:
- * 1) estructura de dato con parametros internos (cambia acorde al problema/contexto del momento)
- * 2) callback para ejecutar en la tarea que recibe el mensaje (posterior a la ejecucion del callback propio del objeto activo target)
- * 3) estructura de objeto activo target
- */
+typedef void* ao_event_t;
+
+typedef struct {
+	 void (*ao_process_event_t)(ao_event_t*);
+	 QueueHandle_t event_queue_h;
+ } ao_t;
+
+typedef struct {
+	ao_event_t event;
+	void (*ao_msg_callback_t)(void*);
+	ao_t ao;
+} ao_msg_t;
+
 #endif /* INC_AO_H_ */
