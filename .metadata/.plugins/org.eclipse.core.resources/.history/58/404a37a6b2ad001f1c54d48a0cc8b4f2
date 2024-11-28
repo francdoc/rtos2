@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <stdbool.h>
+
+#include "main.h"
+#include "cmsis_os.h"
+#include "board.h"
+#include "logger.h"
+#include "dwt.h"
+#include "task_button.h"
+#include "task_led.h"
+
+void init_ui_active_object(ao_t *ao_ui, void (*ao_process_event_t)(ao_event_t*), uint8_t task_priority){
+
+}
