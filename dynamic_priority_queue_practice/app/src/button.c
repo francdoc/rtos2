@@ -13,7 +13,9 @@
 
 /********************** macros and definitions *******************************/
 
-#define BUTTON_PERIOD_MS_               (50)
+#define TASK_PERIOD_MS_           (50)
+
+#define BUTTON_PERIOD_MS_         (TASK_PERIOD_MS_)
 #define BUTTON_PULSE_TIMEOUT_           (200)
 #define BUTTON_SHORT_TIMEOUT_           (1000)
 #define BUTTON_LONG_TIMEOUT_            (2000)
@@ -129,9 +131,10 @@ void button_task(void* argument)
 		button_event.type = button_process_state(button_state);
 		if (button_event.type != BUTTON_TYPE_NONE)
 		{
-			LOGGER_INFO("%d", button_event.type);
+			LOGGER_INFO("Button event type detected: %d", button_event.type);
 			send_(ui_ao, &button_event);
 		}
+	    vTaskDelay((TickType_t)(TASK_PERIOD_MS_ / portTICK_PERIOD_MS));
 	}
 }
 

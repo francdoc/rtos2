@@ -38,9 +38,8 @@ void ao_task(void* parameters){
 
 	ao_msg_t ao_msg;
 
-	LOGGER_INFO("ao task ready");
-
-	while (pdPASS == xQueueReceive(ao->event_queue_h, &ao_msg, (TickType_t)(MESSAGE_TIMEOUT_MS_/ portTICK_PERIOD_MS))) {
+	while (pdPASS == xQueueReceive(ao->event_queue_h, &ao_msg, (TickType_t)(portMAX_DELAY))) {
+		LOGGER_INFO("received message");
 		ao->ao_process_event(ao_msg.ao_event);
 		if(ao_msg.ao_msg_callback){
 			ao_msg.ao_msg_callback(ao_msg.ao_event);
@@ -55,7 +54,13 @@ bool ao_send(ao_t* ao,
   ao_msg_t ao_msg;
   ao_msg.ao_msg_callback = ao_msg_callback;
   ao_msg.ao_event = ao_event;
-  return (pdPASS == xQueueSendToBack(ao->event_queue_h, (void*)&ao_msg, 0));
+  if (pdPASS == xQueueSend(ao->event_queue_h, (void*)&ao_msg, 0)) {
+	  LOGGER_INFO("ao_send: Message successfully sent to queue (ID: %d)", ao->ao_id);
+	  return true;
+  } else {
+	  LOGGER_INFO("ao_send: Failed to send message to queue (ID: %d)", ao->ao_id);
+	  return false;
+  }
 }
 
 void init_ao(ao_t* ao,
