@@ -4,8 +4,10 @@
 #include "dwt.h"
 #include "board.h"
 
-#include "app.h"
 #include "button.h"
+#include "ui.h"
+
+#include "app.h"
 
 #define LED_AO_TASK_PRIORITY (tskIDLE_PRIORITY + 1)
 #define UI_AO_TASK_PRIORITY (tskIDLE_PRIORITY + 1)
@@ -29,7 +31,7 @@ void app_init(void)
 
 	BaseType_t status;
 	status = xTaskCreate(button_task, "Button_Task", configMINIMAL_STACK_SIZE, &system, BUTTON_TASK_PRIORITY, NULL);
-	configASSERT(pdPASS = status);
+	configASSERT(pdPASS == status);
 
 	while (pdPASS != status)
 	{

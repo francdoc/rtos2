@@ -1,0 +1,7 @@
+#ifndef INC_PAO_H_
+#define INC_PAO_H_
+
+#define MAX_SIZE 10
+
+
+#endif /* INC_PAO_H_ */

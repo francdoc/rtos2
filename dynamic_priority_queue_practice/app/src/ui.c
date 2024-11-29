@@ -11,11 +11,14 @@
 #include "app.h"
 #include "button.h"
 #include "led.h"
+#include "ui.h"
 
-void ui_process_event(ao_event_t ao_event) {
-	button_event_t *button_event = (button_event_t*) ao_event;
-	led_color_t led_color;
-	int priority;
+void ui_process_event(ao_event_t* ao_event) {
+	/*Adjusting ui_process_event to accept a pointer matches the type expected by ao_process_event_t.*/
+	button_event_t* button_event = (button_event_t*) (*ao_event);
+
+	int priority = 0;
+	led_color_t led_color = LED_COLOR_NONE; // Initialize to avoid uninitialized use
 
 	switch(button_event->type) {
 	case BUTTON_TYPE_PULSE:
@@ -34,9 +37,10 @@ void ui_process_event(ao_event_t ao_event) {
 		led_color = LED_COLOR_BLUE;
 		break;
 	default:
-		break;
+		LOGGER_INFO("Unknown button event type: %d", button_event->type);
+		return; // Exit if the event type is unknown
 	}
 	if (button_event->type != BUTTON_TYPE_NONE) {
-		// pass for now...
+		LOGGER_INFO("Priority: %d, LED Color: %d", priority, led_color);
 	}
 }

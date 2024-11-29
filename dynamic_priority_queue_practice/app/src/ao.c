@@ -33,7 +33,7 @@ char *get_queue_name(uint8_t id) {
 	return buffer[id-1];
 }
 
-static void ao_task(void* parameters){
+void ao_task(void* parameters){
 	ao_t *ao = (ao_t*) parameters;
 
 	ao_msg_t ao_msg;
@@ -41,7 +41,7 @@ static void ao_task(void* parameters){
 	while (pdPASS == xQueueReceive(ao->event_queue_h, &ao_msg, (TickType_t)(MESSAGE_TIMEOUT_MS_/ portTICK_PERIOD_MS))) {
 		ao->ao_process_event(ao_msg.ao_event);
 		if(ao_msg.ao_msg_callback){
-			ao_msg->ao_msg_callback(ao_msg.ao_event);
+			ao_msg.ao_msg_callback(ao_msg.ao_event);
 		}
 	}
 }
@@ -57,7 +57,7 @@ bool ao_send(ao_t* ao,
 }
 
 void init_ao(ao_t* ao,
-		ao_process_event_t* ao_process_event,
+		ao_process_event_t ao_process_event,
 		uint8_t ao_task_priority,
 		const char* task_name)
 {
