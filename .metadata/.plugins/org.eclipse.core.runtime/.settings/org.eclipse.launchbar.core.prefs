@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:dynamic_priority_queue_practice,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:sistemas_reactivos_tp1_ejemplo
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:dynamic_priority_queue_practice,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:sistemas_reactivos_tp1_ejemplo,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:dynamic_priority_queue_practice (1)
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:dynamic_priority_queue_practice/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:dynamic_priority_queue_practice/activeLaunchTarget=null\:---

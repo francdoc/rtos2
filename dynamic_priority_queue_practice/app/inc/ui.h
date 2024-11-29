@@ -3,6 +3,6 @@
 
 #include "ao.h"
 
-void ui_process_event(ao_event_t* ao_event) {
+void ui_process_event(ao_event_t* ao_event);
 
 #endif /* INC_UI_H_ */

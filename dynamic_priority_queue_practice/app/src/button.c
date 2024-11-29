@@ -107,7 +107,8 @@ static void send_(ao_t* ao, button_event_t* button_event)
 
 void button_init(void)
 {
-  button.counter = 0;
+	LOGGER_INFO("button init");
+	button.counter = 0;
 }
 
 void button_task(void* argument)
@@ -120,12 +121,15 @@ void button_task(void* argument)
 	button_event_t button_event;
 	// button_event.ao_leds = system->leds;
 
+	LOGGER_INFO("going to enter button loop");
+
 	while(true) {
 		GPIO_PinState button_state;
 		button_state = HAL_GPIO_ReadPin(BUTTON_PORT, BUTTON_PIN);
 		button_event.type = button_process_state(button_state);
 		if (button_event.type != BUTTON_TYPE_NONE)
 		{
+			LOGGER_INFO("%d", button_event.type);
 			send_(ui_ao, &button_event);
 		}
 	}

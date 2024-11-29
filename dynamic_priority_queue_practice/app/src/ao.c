@@ -38,6 +38,8 @@ void ao_task(void* parameters){
 
 	ao_msg_t ao_msg;
 
+	LOGGER_INFO("ao task ready");
+
 	while (pdPASS == xQueueReceive(ao->event_queue_h, &ao_msg, (TickType_t)(MESSAGE_TIMEOUT_MS_/ portTICK_PERIOD_MS))) {
 		ao->ao_process_event(ao_msg.ao_event);
 		if(ao_msg.ao_msg_callback){
