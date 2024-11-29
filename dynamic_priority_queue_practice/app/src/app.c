@@ -5,6 +5,7 @@
 #include "board.h"
 
 #include "app.h"
+#include "button.h"
 
 #define LED_AO_TASK_PRIORITY (tskIDLE_PRIORITY + 1)
 #define UI_AO_TASK_PRIORITY (tskIDLE_PRIORITY + 1)
@@ -20,14 +21,14 @@ static system_t system = {
 
 void app_init(void)
 {
-	ao_ui->ao_id = 0;
-	ao_ui->ao_event_size = (uint8_t)sizeof(button_event_t);
+	ao_ui.ao_id = 0;
+	ao_ui.ao_event_size = (uint8_t)sizeof(button_event_t);
 	init_ao(&ao_ui, ui_process_event, UI_AO_TASK_PRIORITY, "task_ui");
 
-	init_pao(&ao_leds, leds_process_event, LED_AO_TASK_PRIORITY);
+	// init_pao(&ao_leds, leds_process_event, LED_AO_TASK_PRIORITY);
 
 	BaseType_t status;
-	status = xTaskCreate(task_button, "Button_Task", configMINIMAL_STACK_SIZE, &system, BUTTON_TASK_PRIORITY, NULL);
+	status = xTaskCreate(button_task, "Button_Task", configMINIMAL_STACK_SIZE, &system, BUTTON_TASK_PRIORITY, NULL);
 	configASSERT(pdPASS = status);
 
 	while (pdPASS != status)

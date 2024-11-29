@@ -3,6 +3,7 @@
 
 typedef void* ao_event_t;
 typedef void (*ao_process_event_t)(ao_event_t* ao_event);
+typedef void (*ao_msg_callback_t)(ao_event_t* ao_event);
 
 typedef struct {
 	uint8_t ao_event_size;
@@ -12,9 +13,8 @@ typedef struct {
  } ao_t;
 
 typedef struct {
-	ao_event_t event;
-	void (*ao_msg_callback_t)(void*);
-	ao_t ao;
+	ao_msg_callback_t ao_msg_callback;
+	ao_event_t ao_event;
 } ao_msg_t;
 
 void init_ao(ao_t* ao,
