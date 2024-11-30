@@ -27,7 +27,7 @@ void app_init(void)
 	ao_ui.ao_event_size = (uint8_t)sizeof(button_event_t);
 	init_ao(&ao_ui, ui_process_event, UI_AO_TASK_PRIORITY, "task_ui");
 
-	// init_pao(&pao_leds, leds_process_event, LED_AO_TASK_PRIORITY, "task_leds");
+	init_pao(&pao_leds, leds_process_event, LED_AO_TASK_PRIORITY, "task_leds");
 
 	BaseType_t status;
 	status = xTaskCreate(button_task, "Button_Task", configMINIMAL_STACK_SIZE, &system, BUTTON_TASK_PRIORITY, NULL);
