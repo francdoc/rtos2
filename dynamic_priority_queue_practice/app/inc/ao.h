@@ -2,6 +2,8 @@
 #define INC_AO_H_
 
 #include "app.h"
+#include "queue_p.h"
+
 #include <stdbool.h>
 
 #define MAX_SIZE 10
@@ -27,32 +29,16 @@ typedef struct {
 	uint8_t ao_id;
  } ao_t;
 
-typedef enum {
-	LOW,
-	MEDIUM,
-	HIGH
-} priority_t;
-
 typedef struct {
-	priority_t priority;
-	pao_event_t pao_event;
-} queue_data_t;
-
-typedef struct {
-	int size;
-	queue_data_t elements[MAX_SIZE];
-	SemaphoreHandle_t mtx;
-} PrioQueueHandle_t;
-
-typedef struct {
-	void (*pao_process_event_t)(pao_event_t*);
-	PrioQueueHandle_t pevent_queue_h;
+	uint8_t pao_event_size;
+	pao_process_event_t pao_process_event;
+	queue_p_t pevent_queue_h;
+	uint8_t pao_id;
 } pao_t;
 
 typedef struct {
-	pao_event_t pevent;
-	void (*pao_msg_callback_t)(void*);
-	pao_t pao;
+	pao_msg_callback_t pao_msg_callback;
+	pao_event_t pao_event;
 } pao_msg_t;
 
 typedef struct {

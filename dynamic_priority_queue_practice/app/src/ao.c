@@ -12,6 +12,8 @@
 
 #include "button.h" // for debugging -> attempt to cast ao_event to a specific type for logging
 
+#include "queue_p.h"
+
 #define MESSAGE_TIMEOUT_MS_      (100)
 #define QUEUE_LENGTH_            (10)
 
@@ -61,8 +63,25 @@ void ao_task(void* parameters){
 		ao->ao_process_event(&ao_msg.ao_event); // ao_process_event expects: ao_event_t* (a void**).
 
 		LOGGER_INFO("ao_task: executing callback");
-		if(ao_msg.ao_msg_callback){
+		if (ao_msg.ao_msg_callback){
 			ao_msg.ao_msg_callback(ao_msg.ao_event);
+		}
+	}
+}
+
+void pao_task(void* parameters){
+	pao_t *pao = (pao_t*) parameters;
+
+	pao_msg_t pao_msg;
+
+	for (;;) {
+		if (queue_pop(&pao->pevent_queue_h, pao_msg) && pao->pao_process_event != NULL) {
+			pao->pao_process_event(&pao_msg.pao_event);
+
+			LOGGER_INFO("pao_task: executing callback");
+			if (pao_msg.pao_msg_callback) {
+				pao_msg.pao_msg_callback(pao_msg.pao_event);
+			}
 		}
 	}
 }
@@ -103,4 +122,19 @@ void init_ao(ao_t* ao,
 	BaseType_t status;
 	status = xTaskCreate(ao_task, task_name, configMINIMAL_STACK_SIZE, ao, ao_task_priority, NULL);
 	configASSERT(pdPASS == status);
+}
+
+void init_pao(pao_t* pao,
+		pao_process_event_t pao_process_event,
+		uint8_t pao_task_priority,
+		const char* task_name)
+{
+    queue_create(&pao->pevent_queue_h);
+    configASSERT(NULL != pao->pevent_queue_h);
+
+    pao->pao_process_event = pao_process_event;
+
+    BaseType_t status;
+    status = xTaskCreate(pao_task, task_name, configMINIMAL_STACK_SIZE, pao, pao_task_priority, NULL);
+    configASSERT(pdPASS == status);
 }
