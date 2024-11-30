@@ -83,6 +83,8 @@ static void send_(ao_t* ao, button_event_t* button_event)
         return;
     }
 
+    memset(ao_event, 0, sizeof(button_event_t));
+
     memcpy(ao_event, button_event, sizeof(button_event_t));
     LOGGER_INFO("send_: Preparing to send button event with type: %d", button_event->type);
 

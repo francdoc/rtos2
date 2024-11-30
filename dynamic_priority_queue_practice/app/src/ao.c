@@ -15,6 +15,8 @@
 #define MESSAGE_TIMEOUT_MS_      (100)
 #define QUEUE_LENGTH_            (10)
 
+#define DEBUGGING
+
 static char *QUEUE_ID_1 = "Queue_id_1";
 static char *QUEUE_ID_2 = "Queue_id_2";
 static char *QUEUE_ID_3 = "Queue_id_3";
@@ -47,18 +49,18 @@ void ao_task(void* parameters){
 		LOGGER_INFO("ao_task: ao_msg.ao_event pointer: %p", ao_msg.ao_event);
 		LOGGER_INFO("ao_task: ao_msg.ao_msg_callback pointer: %p", ao_msg.ao_msg_callback);
 
-		// DEBUGGING //
-
+#ifdef DEBUGGING
 		// Attempt to cast ao_event to a specific type for logging
 		button_event_t* button_event = (button_event_t*)(ao_msg.ao_event);
 		if (button_event) {
 			LOGGER_INFO("ao_task: button_event.type: %d", button_event->type);
 		}
+#endif
 
-		//////////////
+		LOGGER_INFO("ao_task: executing process_event");
+		ao->ao_process_event(&ao_msg.ao_event); // ao_process_event expects: ao_event_t* (a void**).
 
-		ao->ao_process_event(ao_msg.ao_event);
-
+		LOGGER_INFO("ao_task: executing callback");
 		if(ao_msg.ao_msg_callback){
 			ao_msg.ao_msg_callback(ao_msg.ao_event);
 		}

@@ -19,12 +19,25 @@ void ui_process_event(ao_event_t* ao_event) {
 		return;
 	}
 
+    LOGGER_INFO("ui_process_event: Received ao_event pointer: %p", *ao_event);
+
     /* Adjusting ui_process_event to accept a pointer matches the type expected by ao_process_event_t. */
     button_event_t* button_event = (button_event_t*)(*ao_event);
 
-    /*
+    // Check if the casted pointer is valid
+    if (button_event == NULL) {
+        LOGGER_INFO("ui_process_event: button_event is NULL after casting");
+        return;
+    }
+
+    if (button_event->type < BUTTON_TYPE_PULSE || button_event->type > BUTTON_TYPE_NONE) {
+        LOGGER_INFO("ui_process_event: Invalid button event type: %d", button_event->type);
+        return;
+    }
+
     LOGGER_INFO("ui_process_event: Button event type received: %d", button_event->type);
 
+    /*
     int priority = 0;
     led_color_t led_color = LED_COLOR_NONE; // Initialize to avoid uninitialized use
 
