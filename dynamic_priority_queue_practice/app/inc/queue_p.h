@@ -26,11 +26,11 @@ typedef struct queue_p
 
 int queue_peek(queue_p_t* queue);
 
-void queue_create(queue_p_t **queue);
+void queue_create(queue_p_t *queue);
 
 void queue_destroy(queue_p_t **queue);
 
-bool_t queue_pop(queue_p_t* queue, int* data);
+bool_t queue_pop(queue_p_t* queue, void* data);
 
 bool_t queue_push(queue_p_t* queue, int d, int p);
 

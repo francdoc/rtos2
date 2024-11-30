@@ -2,6 +2,8 @@
 
 #include "queue_p.h"
 
+#include <string.h>
+
 #define QUEUE_P_LENGTH 10
 
 // Function to create a new node
@@ -22,15 +24,15 @@ int queue_peek(queue_p_t* queue)
     return node->data; 
 }
 
-void queue_create(queue_p_t **queue)
+void queue_create(queue_p_t *queue)
 {
     if(queue) {
-        *queue = pvPortMalloc(sizeof(queue_p_t));
-        (*queue)->head = NULL;
-        (*queue)->tail = NULL;
-        (*queue)->current_length = 0;
-        (*queue)->queue_mutex = xSemaphoreCreateMutex();
-        vQueueAddToRegistry((*queue)->queue_mutex, "Mutex Handle");
+        queue = pvPortMalloc(sizeof(queue_p_t));
+        (queue)->head = NULL;
+        (queue)->tail = NULL;
+        (queue)->current_length = 0;
+        (queue)->queue_mutex = xSemaphoreCreateMutex();
+        vQueueAddToRegistry((queue)->queue_mutex, "Mutex Handle");
     }
 }
 
@@ -59,15 +61,18 @@ void queue_destroy(queue_p_t **queue)
 }
 
 // Removes the element with the highest priority form the list
-bool_t queue_pop(queue_p_t* queue, int* data)
+bool_t queue_pop(queue_p_t* queue, void* data)
 {
-    if(!queue || !data) return false;
+    if(!queue || !data) {
+    	return false;
+    }
+
     bool_t ret = false;
 
-    xSemaphoreTake(queue->queue_mutex,portMAX_DELAY);
+    xSemaphoreTake(queue->queue_mutex, portMAX_DELAY);
     {
         if(!queue_is_empty(queue)) {
-            *data = queue->head->data;
+            memcpy(data, &(queue->head->data), sizeof(int));
             node_t* temp = queue->head;
             (queue->head) = (queue->head)->next;
             queue->current_length--;

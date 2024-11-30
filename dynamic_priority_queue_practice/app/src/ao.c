@@ -75,9 +75,8 @@ void pao_task(void* parameters){
 	pao_msg_t pao_msg;
 
 	for (;;) {
-		if (queue_pop(&pao->pevent_queue_h, pao_msg) && pao->pao_process_event != NULL) {
+		if (queue_pop(&pao->pevent_queue_h, &pao_msg) && pao->pao_process_event != NULL) {
 			pao->pao_process_event(&pao_msg.pao_event);
-
 			LOGGER_INFO("pao_task: executing callback");
 			if (pao_msg.pao_msg_callback) {
 				pao_msg.pao_msg_callback(pao_msg.pao_event);
@@ -130,7 +129,7 @@ void init_pao(pao_t* pao,
 		const char* task_name)
 {
     queue_create(&pao->pevent_queue_h);
-    configASSERT(NULL != pao->pevent_queue_h);
+    configASSERT(NULL != pao->pevent_queue_h.queue_mutex);
 
     pao->pao_process_event = pao_process_event;
 
