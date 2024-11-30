@@ -37,9 +37,8 @@ void ui_process_event(ao_event_t* ao_event) {
 
     LOGGER_INFO("ui_process_event: Button event type received: %d", button_event->type);
 
-    /*
     int priority = 0;
-    led_color_t led_color = LED_COLOR_NONE; // Initialize to avoid uninitialized use
+    led_color_t led_color = LED_COLOR_NONE;
 
     LOGGER_INFO("ui_process_event: Entering switch case");
 
@@ -67,6 +66,5 @@ void ui_process_event(ao_event_t* ao_event) {
     if (button_event->type != BUTTON_TYPE_NONE) {
           LOGGER_INFO("Priority: %d, LED Color: %d", priority, led_color);
     }
-    */
 }
 
