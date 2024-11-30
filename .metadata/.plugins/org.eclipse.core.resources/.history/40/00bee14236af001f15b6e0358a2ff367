@@ -10,8 +10,6 @@
 
 #include "ao.h"
 
-#include "button.h" // for debugging -> attempt to cast ao_event to a specific type for logging
-
 #define MESSAGE_TIMEOUT_MS_      (100)
 #define QUEUE_LENGTH_            (10)
 
@@ -46,16 +44,6 @@ void ao_task(void* parameters){
 		// Log the contents of ao_msg
 		LOGGER_INFO("ao_task: ao_msg.ao_event pointer: %p", ao_msg.ao_event);
 		LOGGER_INFO("ao_task: ao_msg.ao_msg_callback pointer: %p", ao_msg.ao_msg_callback);
-
-		// DEBUGGING //
-
-		// Attempt to cast ao_event to a specific type for logging
-		button_event_t* button_event = (button_event_t*)(ao_msg.ao_event);
-		if (button_event) {
-			LOGGER_INFO("ao_task: button_event.type: %d", button_event->type);
-		}
-
-		//////////////
 
 		ao->ao_process_event(ao_msg.ao_event);
 
