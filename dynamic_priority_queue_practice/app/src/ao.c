@@ -47,20 +47,22 @@ void ao_task(void* parameters){
 	}
 }
 
-bool ao_send(ao_t* ao,
-		ao_msg_callback_t ao_msg_callback,
-		ao_event_t ao_event)
+bool ao_send(ao_t* ao, ao_msg_callback_t ao_msg_callback, ao_event_t ao_event)
 {
-  ao_msg_t ao_msg;
-  ao_msg.ao_msg_callback = ao_msg_callback;
-  ao_msg.ao_event = ao_event;
-  if (pdPASS == xQueueSend(ao->event_queue_h, (void*)&ao_msg, 0)) {
-	  LOGGER_INFO("ao_send: Message successfully sent to queue (ID: %d)", ao->ao_id);
-	  return true;
-  } else {
-	  LOGGER_INFO("ao_send: Failed to send message to queue (ID: %d)", ao->ao_id);
-	  return false;
-  }
+    ao_msg_t ao_msg;
+    ao_msg.ao_msg_callback = ao_msg_callback;
+    ao_msg.ao_event = ao_event;
+
+    // Log the type of event being sent
+    LOGGER_INFO("ao_send: Sending event to queue with ID: %d", ao->ao_id);
+
+    if (pdPASS == xQueueSendToBack(ao->event_queue_h, (void*)&ao_msg, 0)) {
+        LOGGER_INFO("ao_send: Message successfully sent to queue (ID: %d)", ao->ao_id);
+        return true;
+    } else {
+        LOGGER_INFO("ao_send: Failed to send message to queue (ID: %d)", ao->ao_id);
+        return false;
+    }
 }
 
 void init_ao(ao_t* ao,
