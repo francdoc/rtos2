@@ -128,7 +128,9 @@ void init_pao(pao_t* pao,
 		uint8_t pao_task_priority,
 		const char* task_name)
 {
-    queue_create(&pao->pevent_queue_h);
+    queue_p_t queue_instance;
+    queue_create(&queue_instance);
+    pao->pevent_queue_h = queue_instance;
     configASSERT(NULL != pao->pevent_queue_h.queue_mutex);
 
     pao->pao_process_event = pao_process_event;

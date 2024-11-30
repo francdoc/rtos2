@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;dynamic_priority_queue_practice/app/inc/led.h&apos; to &apos;leds.h&apos;" description="Rename resource &apos;led.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="app/inc/led.h" name="leds.h" stamp="1733008180873" updateReferences="true"/>
+</session>

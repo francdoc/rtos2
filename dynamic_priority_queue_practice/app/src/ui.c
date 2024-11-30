@@ -1,3 +1,4 @@
+#include <leds.h>
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
@@ -10,7 +11,6 @@
 
 #include "app.h"
 #include "button.h"
-#include "led.h"
 #include "ui.h"
 
 void ui_process_event(ao_event_t* ao_event) {
@@ -51,7 +51,7 @@ void ui_process_event(ao_event_t* ao_event) {
         case BUTTON_TYPE_SHORT:
             LOGGER_INFO("SHORT");
             priority = 2;
-            led_color = LED_COLOR_GREEN;
+            led_color = LED_COLOR_YELLOW;
             break;
         case BUTTON_TYPE_LONG:
             LOGGER_INFO("LONG");

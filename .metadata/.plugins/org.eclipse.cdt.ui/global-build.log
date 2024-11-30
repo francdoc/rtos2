@@ -1,8 +1,9 @@
-19:51:27 **** Build of configuration Debug for project dynamic_priority_queue_practice ****
+20:25:09 **** Build of configuration Debug for project dynamic_priority_queue_practice ****
 make -j12 all 
 arm-none-eabi-gcc "../app/src/ao.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../app/inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"app/src/ao.d" -MT"app/src/ao.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "app/src/ao.o"
 arm-none-eabi-gcc "../app/src/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../app/inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"app/src/app.d" -MT"app/src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "app/src/app.o"
 arm-none-eabi-gcc "../app/src/button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../app/inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"app/src/button.d" -MT"app/src/button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "app/src/button.o"
+arm-none-eabi-gcc "../app/src/leds.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../app/inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"app/src/leds.d" -MT"app/src/leds.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "app/src/leds.o"
 arm-none-eabi-gcc "../app/src/logger.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../app/inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"app/src/logger.d" -MT"app/src/logger.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "app/src/logger.o"
 arm-none-eabi-gcc "../app/src/queue_p.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../app/inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"app/src/queue_p.d" -MT"app/src/queue_p.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "app/src/queue_p.o"
 arm-none-eabi-gcc "../app/src/ui.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../app/inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"app/src/ui.d" -MT"app/src/ui.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "app/src/ui.o"
@@ -51,22 +52,38 @@ Finished building target: dynamic_priority_queue_practice.elf
 arm-none-eabi-size  dynamic_priority_queue_practice.elf 
 arm-none-eabi-objdump -h -S dynamic_priority_queue_practice.elf  > "dynamic_priority_queue_practice.list"
    text	   data	    bss	    dec	    hex	filename
+  39040	    152	  20000	  59192	   e738	dynamic_priority_queue_practice.elf
+Finished building: default.size.stdout
+ 
+Finished building: dynamic_priority_queue_practice.list
+ 
+20:25:21 **** Incremental Build of configuration Debug for project dynamic_priority_queue_practice ****
+make -j12 all 
+arm-none-eabi-gcc "../app/src/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../app/inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"app/src/app.d" -MT"app/src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "app/src/app.o"
+arm-none-eabi-gcc -o "dynamic_priority_queue_practice.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"/home/silico/repos/rtos2/dynamic_priority_queue_practice/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dynamic_priority_queue_practice.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: warning: dynamic_priority_queue_practice.elf has a LOAD segment with RWX permissions
+Finished building target: dynamic_priority_queue_practice.elf
+ 
+arm-none-eabi-size  dynamic_priority_queue_practice.elf 
+arm-none-eabi-objdump -h -S dynamic_priority_queue_practice.elf  > "dynamic_priority_queue_practice.list"
+   text	   data	    bss	    dec	    hex	filename
   36408	    152	  20000	  56560	   dcf0	dynamic_priority_queue_practice.elf
 Finished building: default.size.stdout
  
 Finished building: dynamic_priority_queue_practice.list
  
-19:51:45 **** Incremental Build of configuration Debug for project dynamic_priority_queue_practice ****
+20:25:23 **** Incremental Build of configuration Debug for project dynamic_priority_queue_practice ****
 make -j12 all 
+arm-none-eabi-gcc "../app/src/app.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../app/inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"app/src/app.d" -MT"app/src/app.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "app/src/app.o"
+arm-none-eabi-gcc -o "dynamic_priority_queue_practice.elf" @"objects.list"  -lrdimon -mcpu=cortex-m4 -T"/home/silico/repos/rtos2/dynamic_priority_queue_practice/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dynamic_priority_queue_practice.map" -Wl,--gc-sections -static -specs=rdimon.specs --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld: warning: dynamic_priority_queue_practice.elf has a LOAD segment with RWX permissions
+Finished building target: dynamic_priority_queue_practice.elf
+ 
 arm-none-eabi-size  dynamic_priority_queue_practice.elf 
+arm-none-eabi-objdump -h -S dynamic_priority_queue_practice.elf  > "dynamic_priority_queue_practice.list"
    text	   data	    bss	    dec	    hex	filename
   36408	    152	  20000	  56560	   dcf0	dynamic_priority_queue_practice.elf
 Finished building: default.size.stdout
  
-19:51:47 **** Incremental Build of configuration Debug for project dynamic_priority_queue_practice ****
-make -j12 all 
-arm-none-eabi-size  dynamic_priority_queue_practice.elf 
-   text	   data	    bss	    dec	    hex	filename
-  36408	    152	  20000	  56560	   dcf0	dynamic_priority_queue_practice.elf
-Finished building: default.size.stdout
+Finished building: dynamic_priority_queue_practice.list
  

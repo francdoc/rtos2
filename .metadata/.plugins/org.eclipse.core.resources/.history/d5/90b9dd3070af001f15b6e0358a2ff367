@@ -1,0 +1,18 @@
+#ifndef INC_LEDS_H_
+#define INC_LEDS_H_
+
+#include "ao.h"
+
+typedef enum {
+	LED_COLOR_NONE,
+	LED_COLOR_RED,
+	LED_COLOR_GREEN,
+	LED_COLOR_BLUE,
+	LED_COLOR_WHITE,
+	LED_COLOR_N,
+} led_color_t;
+
+void leds_process_event(event_data_t event);
+void init_led_active_object(active_object_t *led_obj,
+                            void (*callback)(event_data_t),
+                            uint8_t priority);

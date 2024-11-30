@@ -6,6 +6,7 @@
 
 #include "button.h"
 #include "ui.h"
+#include "leds.h"
 
 #include "app.h"
 

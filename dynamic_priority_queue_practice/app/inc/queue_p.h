@@ -28,7 +28,7 @@ int queue_peek(queue_p_t* queue);
 
 void queue_create(queue_p_t *queue);
 
-void queue_destroy(queue_p_t **queue);
+void queue_destroy(queue_p_t *queue);
 
 bool_t queue_pop(queue_p_t* queue, void* data);
 

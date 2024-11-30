@@ -26,41 +26,43 @@ int queue_peek(queue_p_t* queue)
 
 void queue_create(queue_p_t *queue)
 {
-    if(queue) {
-        queue = pvPortMalloc(sizeof(queue_p_t));
-        (queue)->head = NULL;
-        (queue)->tail = NULL;
-        (queue)->current_length = 0;
-        (queue)->queue_mutex = xSemaphoreCreateMutex();
-        vQueueAddToRegistry((queue)->queue_mutex, "Mutex Handle");
+    if (queue) {
+        queue->head = NULL;
+        queue->tail = NULL;
+        queue->current_length = 0;
+        queue->queue_mutex = xSemaphoreCreateMutex();
+        vQueueAddToRegistry(queue->queue_mutex, "Mutex Handle");
     }
 }
 
-void queue_destroy(queue_p_t **queue)
+void queue_destroy(queue_p_t *queue)
 {
-    if(queue && *queue) {
-        // Protects shared resource (mutex)
-        xSemaphoreTake((*queue)->queue_mutex,portMAX_DELAY);
+    if (queue) {
+        // Protect shared resource (mutex)
+        xSemaphoreTake(queue->queue_mutex, portMAX_DELAY);
         {
-            node_t *next = (*queue)->head->next;
-            node_t *current = (*queue)->head;
+            node_t *next = queue->head ? queue->head->next : NULL; // Ensure head is valid before accessing next
+            node_t *current = queue->head;
 
-            while (!next)
-            {
+            while (current) {
                 vPortFree(current);
                 current = next;
-                next = current->next;
+                next = current ? current->next : NULL; // Prevent dereferencing NULL
             }
         }
-        xSemaphoreGive((*queue)->queue_mutex);
-        // mutex destroy
-        vSemaphoreDelete((*queue)->queue_mutex);
-        vPortFree(*queue);
-        *queue = NULL;
+        xSemaphoreGive(queue->queue_mutex);
+
+        // Destroy the mutex
+        vSemaphoreDelete(queue->queue_mutex);
+
+        // Reset the queue's fields to indicate it is cleared
+        queue->head = NULL;
+        queue->tail = NULL;
+        queue->current_length = 0;
     }
 }
 
-// Removes the element with the highest priority form the list
+// Removes the element with the highest priority from the list
 bool_t queue_pop(queue_p_t* queue, void* data)
 {
     if(!queue || !data) {
