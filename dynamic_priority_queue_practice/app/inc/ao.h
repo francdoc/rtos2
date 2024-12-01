@@ -60,12 +60,12 @@ void init_pao(pao_t* pao,
 		uint8_t pao_task_priority,
 		const char* task_name);
 
-bool ao_send(ao_t* ao,
+bool_t ao_send(ao_t* ao,
 		ao_msg_callback_t ao_msg_callback,
 		ao_event_t ao_event);
 
-bool pao_send(pao_t* pao,
-		pao_msg_callback_t pao_msg_callback,
-		pao_event_t pao_event);
+bool_t pao_send(pao_t* pao,
+		pao_event_t pao_event,
+		int priority);
 
 #endif /* INC_AO_H_ */

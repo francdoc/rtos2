@@ -14,7 +14,7 @@ typedef enum
 
 typedef struct {
   button_type_t type;
-  ao_t *ao_leds;
+  pao_t *ao_leds;
 } button_event_t;
 
 void button_task(void* argument);

@@ -10,7 +10,8 @@
 
 #include "ao.h"
 
-#include "button.h" // for debugging -> attempt to cast ao_event to a specific type for logging
+#include "button.h"
+#include "leds.h"
 
 #include "queue_p.h"
 
@@ -76,16 +77,28 @@ void pao_task(void* parameters){
 
 	for (;;) {
 		if (queue_pop(&pao->pevent_queue_h, &pao_msg) && pao->pao_process_event != NULL) {
+            LOGGER_INFO("pao_task: pao_msg.pao_event pointer: %p", pao_msg.pao_event);
+            LOGGER_INFO("pao_task: pao_msg.pao_msg_callback pointer: %p", pao_msg.pao_msg_callback);
+
+#ifdef DEBUGGING
+            // Attempt to cast pao_event to a specific type for logging
+            led_color_t* led_event = (led_color_t*)(pao_msg.pao_event); // seg faults here
+            if (led_event) {
+                LOGGER_INFO("pao_task: led_event color: %d", *led_event);
+            }
+#endif
+            LOGGER_INFO("pao_task: executing process_event");
 			pao->pao_process_event(&pao_msg.pao_event);
-			LOGGER_INFO("pao_task: executing callback");
-			if (pao_msg.pao_msg_callback) {
-				pao_msg.pao_msg_callback(pao_msg.pao_event);
-			}
+
+            LOGGER_INFO("pao_task: executing callback");
+            if (pao_msg.pao_msg_callback) {
+                pao_msg.pao_msg_callback(pao_msg.pao_event);
+            }
 		}
 	}
 }
 
-bool ao_send(ao_t* ao, ao_msg_callback_t ao_msg_callback, ao_event_t ao_event)
+bool_t ao_send(ao_t* ao, ao_msg_callback_t ao_msg_callback, ao_event_t ao_event)
 {
     ao_msg_t ao_msg;
     ao_msg.ao_msg_callback = ao_msg_callback;
@@ -105,6 +118,33 @@ bool ao_send(ao_t* ao, ao_msg_callback_t ao_msg_callback, ao_event_t ao_event)
         LOGGER_INFO("ao_send: Failed to send message to queue (ID: %d)", ao->ao_id);
         return false;
     }
+}
+
+bool_t pao_send(pao_t* pao, pao_event_t pao_event, int priority) {
+	if (!pao) {
+		LOGGER_INFO("pao_send: NULL pao pointer");
+		return false;
+	}
+
+	// Dynamically persist pao_msg to ensure it persists in the queue
+	pao_msg_t* pao_msg = (pao_msg_t*)pvPortMalloc(sizeof(pao_msg_t));
+	if(!pao_msg){
+		LOGGER_INFO("pao_send: Memory allocation failed for pao_msg");
+		return false;
+	}
+
+	pao_msg->pao_event = pao_event;
+
+	LOGGER_INFO("pao_send: event pointer: %p, priority: %d", pao_msg->pao_event, priority);
+
+	bool_t result = queue_push((queue_p_t*)&pao->pevent_queue_h, (void*)&pao_msg, (int) priority);
+
+	if (!result){
+        LOGGER_INFO("pao_send: Failed to enqueue pao_msg");
+        vPortFree(pao_msg);
+	}
+
+	return result;
 }
 
 void init_ao(ao_t* ao,

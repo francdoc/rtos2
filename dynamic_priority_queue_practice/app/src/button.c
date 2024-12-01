@@ -117,7 +117,7 @@ void button_task(void* argument)
     button_init();
 
     button_event_t button_event;
-    // button_event.ao_leds = system->leds;
+    button_event.ao_leds = system->leds;
 
     LOGGER_INFO("going to enter button loop");
 
