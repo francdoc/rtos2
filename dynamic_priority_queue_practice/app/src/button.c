@@ -44,13 +44,13 @@ static button_type_t button_process_state(bool value)
     } else {
         if (BUTTON_LONG_TIMEOUT_ <= button.counter) {
             ret = BUTTON_TYPE_LONG;
-            LOGGER_INFO("Button long detected, total press duration: %lu ms", button.counter);
+            // LOGGER_INFO("Button long detected, total press duration: %lu ms", button.counter);
         } else if (BUTTON_SHORT_TIMEOUT_ <= button.counter) {
             ret = BUTTON_TYPE_SHORT;
-            LOGGER_INFO("Button short detected, total press duration: %lu ms", button.counter);
+            // LOGGER_INFO("Button short detected, total press duration: %lu ms", button.counter);
         } else if (BUTTON_PULSE_TIMEOUT_ <= button.counter) {
             ret = BUTTON_TYPE_PULSE;
-            LOGGER_INFO("Button pulse detected, total press duration: %lu ms", button.counter);
+            // LOGGER_INFO("Button pulse detected, total press duration: %lu ms", button.counter);
         }
         button.counter = 0; // Reset counter after processing
     }
@@ -86,20 +86,20 @@ static void send_(ao_t* ao, button_event_t* button_event)
     memset(ao_event, 0, sizeof(button_event_t));
 
     memcpy(ao_event, button_event, sizeof(button_event_t));
-    LOGGER_INFO("send_: Preparing to send button event with type: %d", button_event->type);
+    // LOGGER_INFO("send_: Preparing to send button event with type: %d", button_event->type);
 
     if (BUTTON_TYPE_NONE != button_event->type) {
         if (ao_send(ao, callback_, ao_event)) {
-            LOGGER_INFO("send_: Message sent to ao_send func (ID: %d)", ao->ao_id);
-            LOGGER_INFO("send button msg: OK");
+            // LOGGER_INFO("send_: Message sent to ao_send func (ID: %d)", ao->ao_id);
+            // LOGGER_INFO("send button msg: OK");
             return;
         } else {
-            LOGGER_INFO("send_: Failed to send button event, freeing memory");
+            // LOGGER_INFO("send_: Failed to send button event, freeing memory");
             vPortFree((void*)ao_event);
         }
     }
 
-    LOGGER_INFO("send_: Button event type is NONE, skipping send");
+    // LOGGER_INFO("send_: Button event type is NONE, skipping send");
     vPortFree((void*)ao_event);
 }
 

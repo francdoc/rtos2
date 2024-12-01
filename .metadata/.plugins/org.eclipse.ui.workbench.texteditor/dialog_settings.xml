@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="DEL"/>
+		<item key="selection" value="LOGGER"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="logger"/>
+			<item value="pao_send"/>
+			<item value="bool"/>
+			<item value="queue_is_empty"/>
+			<item value="peek"/>
+			<item value="            LOGGER_INFO(&quot;ui_process_event: Successfully sent LED event to PAO&quot;);&#x0A;"/>
+			<item value="queue_peek"/>
+			<item value="new"/>
+			<item value="new_node"/>
+			<item value="pao_process_event_t"/>
+			<item value="event"/>
+			<item value="priority_t"/>
+			<item value="PrioQueueHandle_t"/>
 			<item value="del"/>
 			<item value="log"/>
-			<item value="app_i"/>
-			<item value="button_process_state"/>
-			<item value="ao_task"/>
-			<item value="LOGGER_ERROR"/>
-			<item value="app"/>
-			<item value="memory_pool"/>
-			<item value="error"/>
-			<item value="warn"/>
-			<item value="ao_blue_led"/>
-			<item value="&#x09;ao_t* ao_blue_led = (ao_t*) ao_all-&gt;blue;"/>
-			<item value="ao_ui"/>
-			<item value="ui_recv_queue_h"/>
-			<item value="yello"/>
 		</list>
 		<list key="replacehistory">
 			<item value="LOGGER_INFO"/>

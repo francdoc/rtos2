@@ -19,7 +19,7 @@ void ui_process_event(ao_event_t* ao_event) {
 		return;
 	}
 
-    LOGGER_INFO("ui_process_event: Received ao_event pointer: %p", *ao_event);
+    // LOGGER_INFO("ui_process_event: Received ao_event pointer: %p", *ao_event);
 
     /* Adjusting ui_process_event to accept a pointer matches the type expected by ao_process_event_t. */
     button_event_t* button_event = (button_event_t*)(*ao_event);
@@ -35,26 +35,26 @@ void ui_process_event(ao_event_t* ao_event) {
         return;
     }
 
-    LOGGER_INFO("ui_process_event: Button event type received: %d", button_event->type);
+    // LOGGER_INFO("ui_process_event: Button event type received: %d", button_event->type);
 
     int priority = 0;
     led_color_t led_color = LED_COLOR_NONE;
 
-    LOGGER_INFO("ui_process_event: Entering switch case");
+    // LOGGER_INFO("ui_process_event: Entering switch case");
 
     switch (button_event->type) {
         case BUTTON_TYPE_PULSE:
-            LOGGER_INFO("PULSE");
+            // LOGGER_INFO("PULSE");
             priority = 3;
             led_color = LED_COLOR_RED;
             break;
         case BUTTON_TYPE_SHORT:
-            LOGGER_INFO("SHORT");
+            // LOGGER_INFO("SHORT");
             priority = 2;
             led_color = LED_COLOR_YELLOW;
             break;
         case BUTTON_TYPE_LONG:
-            LOGGER_INFO("LONG");
+            // LOGGER_INFO("LONG");
             priority = 1;
             led_color = LED_COLOR_BLUE;
             break;
@@ -64,13 +64,13 @@ void ui_process_event(ao_event_t* ao_event) {
     }
 
     if (button_event->type != BUTTON_TYPE_NONE) {
-          LOGGER_INFO("Priority: %d, LED Color: %d", priority, led_color);
+          // LOGGER_INFO("Priority: %d, LED Color: %d", priority, led_color);
 
           if (!pao_send(button_event->ao_leds, led_color, (int) priority)) {
               LOGGER_INFO("ui_process_event: Failed to send LED event to PAO");
           }
           else {
-        	  LOGGER_INFO("ui_process_event: Successfully sent LED event to PAO");
+        	  // LOGGER_INFO("ui_process_event: Successfully sent LED event to PAO");
           }
     }
 }

@@ -18,7 +18,7 @@
 #define MESSAGE_TIMEOUT_MS_      (100)
 #define QUEUE_LENGTH_            (10)
 
-#define DEBUGGING
+// #define DEBUGGING
 
 static char *QUEUE_ID_1 = "Queue_id_1";
 static char *QUEUE_ID_2 = "Queue_id_2";
@@ -46,11 +46,11 @@ void ao_task(void* parameters){
 	ao_msg_t ao_msg;
 
 	while (pdPASS == xQueueReceive(ao->event_queue_h, &ao_msg, (TickType_t)(portMAX_DELAY))) {
-		LOGGER_INFO("received message");
+		// LOGGER_INFO("received message");
 
 		// Log the contents of ao_msg
-		LOGGER_INFO("ao_task: ao_msg.ao_event pointer: %p", ao_msg.ao_event);
-		LOGGER_INFO("ao_task: ao_msg.ao_msg_callback pointer: %p", ao_msg.ao_msg_callback);
+		// LOGGER_INFO("ao_task: ao_msg.ao_event pointer: %p", ao_msg.ao_event);
+		// LOGGER_INFO("ao_task: ao_msg.ao_msg_callback pointer: %p", ao_msg.ao_msg_callback);
 
 #ifdef DEBUGGING
 		// Attempt to cast ao_event to a specific type for logging
@@ -60,10 +60,10 @@ void ao_task(void* parameters){
 		}
 #endif
 
-		LOGGER_INFO("ao_task: executing process_event");
+		// LOGGER_INFO("ao_task: executing process_event");
 		ao->ao_process_event(&ao_msg.ao_event); // ao_process_event expects: ao_event_t* (a void**).
 
-		LOGGER_INFO("ao_task: executing callback");
+		// LOGGER_INFO("ao_task: executing callback");
 		if (ao_msg.ao_msg_callback){
 			ao_msg.ao_msg_callback(ao_msg.ao_event);
 		}
@@ -89,24 +89,24 @@ bool_t ao_send(ao_t* ao, ao_msg_callback_t ao_msg_callback, ao_event_t ao_event)
     ao_msg.ao_event = ao_event;
 
     // Log the contents of ao_msg before sending
-	LOGGER_INFO("ao_send: ao_msg.ao_event pointer: %p", ao_msg.ao_event);
-	LOGGER_INFO("ao_send: ao_msg.ao_msg_callback pointer: %p", ao_msg.ao_msg_callback);
+	// LOGGER_INFO("ao_send: ao_msg.ao_event pointer: %p", ao_msg.ao_event);
+	// LOGGER_INFO("ao_send: ao_msg.ao_msg_callback pointer: %p", ao_msg.ao_msg_callback);
 
     // Log the type of event being sent
-    LOGGER_INFO("ao_send: Sending event to queue with ID: %d", ao->ao_id);
+    // LOGGER_INFO("ao_send: Sending event to queue with ID: %d", ao->ao_id);
 
     if (pdPASS == xQueueSendToBack(ao->event_queue_h, (void*)&ao_msg, 0)) {
-        LOGGER_INFO("ao_send: Message successfully sent to queue (ID: %d)", ao->ao_id);
+        // LOGGER_INFO("ao_send: Message successfully sent to queue (ID: %d)", ao->ao_id);
         return true;
     } else {
-        LOGGER_INFO("ao_send: Failed to send message to queue (ID: %d)", ao->ao_id);
+        // LOGGER_INFO("ao_send: Failed to send message to queue (ID: %d)", ao->ao_id);
         return false;
     }
 }
 
 bool_t pao_send(pao_t* pao, int data, int priority) {
 	if (!pao) {
-		LOGGER_INFO("pao_send: NULL pao pointer");
+		// LOGGER_INFO("pao_send: NULL pao pointer");
 		return false;
 	}
 	return (queue_push(pao->pevent_queue_h, data, priority));
