@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "task_led.h": "c"
+        "task_led.h": "c",
+        "queue_p.h": "c"
     }
 }

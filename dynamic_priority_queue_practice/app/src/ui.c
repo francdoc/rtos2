@@ -66,7 +66,7 @@ void ui_process_event(ao_event_t* ao_event) {
     if (button_event->type != BUTTON_TYPE_NONE) {
           LOGGER_INFO("Priority: %d, LED Color: %d", priority, led_color);
 
-          if (!pao_send(button_event->ao_leds, (pao_event_t)&led_color, (int) priority)) {
+          if (!pao_send(button_event->ao_leds, led_color, (int) priority)) {
               LOGGER_INFO("ui_process_event: Failed to send LED event to PAO");
           }
           else {

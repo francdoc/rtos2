@@ -3,17 +3,15 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-
 #include "FreeRTOS.h"
 #include "cmsis_os.h"
-
 #include "app.h"
 
 typedef bool bool_t;
-
 typedef struct node {
-    void* data;
-    int priority; // Lower values indicate higher priority
+    int data;
+    // Lower values indicate higher priority
+    int priority;
     struct node* next;
 } node_t;
 
@@ -25,14 +23,16 @@ typedef struct queue_p
     SemaphoreHandle_t queue_mutex;
 } queue_p_t;
 
-void queue_create(queue_p_t *queue);
+int queue_peek(queue_p_t* queue);
 
-void queue_destroy(queue_p_t *queue);
+void queue_create(queue_p_t **queue);
 
-bool_t queue_pop(queue_p_t* queue, void* data);
+void queue_destroy(queue_p_t **queue);
 
-bool_t queue_push(queue_p_t* queue, void* data, int p);
+bool_t queue_pop(queue_p_t* queue, int* data);
 
-bool_t queue_is_empty(queue_p_t* queue);
+bool_t queue_push(queue_p_t* queue, int d, int p);
+
+int queue_is_empty(queue_p_t* queue);
 
 #endif // QUEUE_P_H

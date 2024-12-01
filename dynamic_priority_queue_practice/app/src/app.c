@@ -28,6 +28,8 @@ void app_init(void)
 	ao_ui.ao_event_size = (uint8_t)sizeof(button_event_t);
 	init_ao(&ao_ui, ui_process_event, UI_AO_TASK_PRIORITY, "task_ui");
 
+	pao_leds.pao_id = 1;
+	pao_leds.pao_event_size = sizeof(int);
 	init_pao(&pao_leds, leds_process_event, LED_AO_TASK_PRIORITY, "task_leds");
 
 	BaseType_t status;

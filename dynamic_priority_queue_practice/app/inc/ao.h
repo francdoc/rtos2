@@ -30,16 +30,11 @@ typedef struct {
  } ao_t;
 
 typedef struct {
-	uint8_t pao_event_size;
+	queue_p_t* pevent_queue_h;
 	pao_process_event_t pao_process_event;
-	queue_p_t pevent_queue_h;
+	uint8_t pao_event_size;
 	uint8_t pao_id;
 } pao_t;
-
-typedef struct {
-	pao_msg_callback_t pao_msg_callback;
-	pao_event_t pao_event;
-} pao_msg_t;
 
 typedef struct {
 	ao_t *ui;
@@ -65,7 +60,7 @@ bool_t ao_send(ao_t* ao,
 		ao_event_t ao_event);
 
 bool_t pao_send(pao_t* pao,
-		pao_event_t pao_event,
+		int data,
 		int priority);
 
 #endif /* INC_AO_H_ */
