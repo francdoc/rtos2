@@ -15,7 +15,6 @@ typedef void (*ao_process_event_t)(ao_event_t* ao_event);
 typedef void (*pao_process_event_t)(pao_event_t* pao_event);
 
 typedef void (*ao_msg_callback_t)(ao_event_t* ao_event);
-typedef void (*pao_msg_callback_t)(pao_event_t* pao_event);
 
 typedef struct {
 	ao_msg_callback_t ao_msg_callback;

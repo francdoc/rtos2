@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="LOGGER"/>
+		<item key="selection" value="pao_msg_callback_t"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="pao_msg_callback_t"/>
 			<item value="logger"/>
 			<item value="pao_send"/>
 			<item value="bool"/>
@@ -22,7 +23,6 @@
 			<item value="priority_t"/>
 			<item value="PrioQueueHandle_t"/>
 			<item value="del"/>
-			<item value="log"/>
 		</list>
 		<list key="replacehistory">
 			<item value="LOGGER_INFO"/>
